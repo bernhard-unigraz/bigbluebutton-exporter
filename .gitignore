@@ -204,3 +204,7 @@ fabric.properties
 
 .idea
 .DS_Store
+
+# Export script dashboard with API call via curl
+
+bin/credentials.txt
