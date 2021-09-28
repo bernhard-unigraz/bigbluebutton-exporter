@@ -1,1 +1,3230 @@
-{"meta":{"type":"db","canSave":true,"canEdit":true,"canAdmin":true,"canStar":true,"slug":"bigbluebutton-universe","url":"/d/HIbd_CXZz/bigbluebutton-universe","expires":"0001-01-01T00:00:00Z","created":"2021-09-10T16:18:20+02:00","updated":"2021-09-27T16:40:45+02:00","updatedBy":"admin","createdBy":"admin","version":18,"hasAcl":true,"isFolder":false,"folderId":0,"folderUid":"","folderTitle":"General","folderUrl":"","provisioned":false,"provisionedExternalId":""},"dashboard":{"annotations":{"list":[{"datasource":"-- Grafana --","enable":true,"hide":false,"iconColor":"rgba(255, 96, 96, 1)","limit":100,"matchAny":true,"name":"Annotation Tag note","showIn":0,"tags":["note"],"target":{"limit":100,"matchAny":true,"tags":["note"],"type":"tags"},"type":"tags"},{"builtIn":1,"datasource":"-- Grafana --","enable":true,"hide":true,"iconColor":"rgba(0, 211, 255, 1)","name":"Annotations \u0026 Alerts","target":{"limit":100,"matchAny":false,"tags":[],"type":"dashboard"},"type":"dashboard"}]},"editable":true,"gnetId":null,"graphTooltip":0,"id":5,"iteration":1632744138103,"links":[],"panels":[{"collapsed":false,"datasource":null,"gridPos":{"h":1,"w":24,"x":0,"y":0},"id":66,"panels":[],"title":"Overview","type":"row"},{"datasource":null,"fieldConfig":{"defaults":{"color":{"mode":"thresholds"},"mappings":[{"options":{"0":{"index":1,"text":"Off"},"1":{"index":0,"text":"On"}},"type":"value"}],"thresholds":{"mode":"absolute","steps":[{"color":"green","value":null},{"color":"dark-red","value":0},{"color":"semi-dark-green","value":1}]}},"overrides":[]},"gridPos":{"h":3,"w":24,"x":0,"y":1},"id":88,"options":{"reduceOptions":{"calcs":["lastNotNull"],"fields":"","values":false},"showThresholdLabels":false,"showThresholdMarkers":false,"text":{}},"pluginVersion":"8.1.5","targets":[{"exemplar":true,"expr":"bbb_api_up{job=\"$job\"}","interval":"","legendFormat":"{{instance}}","refId":"A"}],"title":"Status","transformations":[{"id":"sortBy","options":{"fields":{},"sort":[{"desc":false,"field":"bbb101.uni-graz.at:443"}]}}],"type":"gauge"},{"datasource":null,"fieldConfig":{"defaults":{"color":{"mode":"thresholds"},"mappings":[],"thresholds":{"mode":"absolute","steps":[{"color":"green","value":null},{"color":"#EAB839","value":4000},{"color":"red","value":5000}]}},"overrides":[]},"gridPos":{"h":3,"w":5,"x":0,"y":4},"id":76,"options":{"colorMode":"value","graphMode":"none","justifyMode":"auto","orientation":"auto","reduceOptions":{"calcs":["lastNotNull"],"fields":"","values":false},"text":{},"textMode":"auto"},"pluginVersion":"8.1.5","targets":[{"exemplar":true,"expr":"sum(bbb_meetings_participants{job=\"$job\"})","interval":"","legendFormat":"","refId":"A"}],"title":"Number of participants (current)","type":"stat"},{"datasource":null,"fieldConfig":{"defaults":{"color":{"mode":"palette-classic"},"custom":{"axisLabel":"","axisPlacement":"auto","barAlignment":0,"drawStyle":"line","fillOpacity":20,"gradientMode":"opacity","hideFrom":{"legend":false,"tooltip":false,"viz":false},"lineInterpolation":"linear","lineWidth":1,"pointSize":5,"scaleDistribution":{"type":"linear"},"showPoints":"auto","spanNulls":false,"stacking":{"group":"A","mode":"none"},"thresholdsStyle":{"mode":"off"}},"mappings":[],"thresholds":{"mode":"absolute","steps":[{"color":"green","value":null},{"color":"red","value":80}]}},"overrides":[]},"gridPos":{"h":7,"w":19,"x":5,"y":4},"id":68,"options":{"legend":{"calcs":[],"displayMode":"list","placement":"bottom"},"tooltip":{"mode":"single"}},"pluginVersion":"8.1.4","targets":[{"exemplar":true,"expr":"sum(bbb_meetings_participants{job=\"$job\"})","instant":false,"interval":"","legendFormat":"Amount","refId":"A"}],"title":"Number of participants","type":"timeseries"},{"datasource":null,"fieldConfig":{"defaults":{"color":{"mode":"palette-classic"},"custom":{"hideFrom":{"legend":false,"tooltip":false,"viz":false}},"mappings":[]},"overrides":[]},"gridPos":{"h":4,"w":5,"x":0,"y":7},"id":84,"options":{"legend":{"displayMode":"hidden","placement":"right","values":["percent"]},"pieType":"donut","reduceOptions":{"calcs":["lastNotNull"],"fields":"","values":false},"tooltip":{"mode":"multi"}},"targets":[{"exemplar":true,"expr":"bbb_meetings_participants{job=\"$job\"}","interval":"","legendFormat":"{{instance}}","refId":"A"}],"title":"Number of participants - per server (current)","type":"piechart"},{"datasource":null,"fieldConfig":{"defaults":{"color":{"mode":"thresholds"},"mappings":[],"thresholds":{"mode":"absolute","steps":[{"color":"green","value":null},{"color":"red","value":80}]}},"overrides":[]},"gridPos":{"h":3,"w":5,"x":0,"y":11},"id":74,"options":{"colorMode":"value","graphMode":"none","justifyMode":"auto","orientation":"auto","reduceOptions":{"calcs":["lastNotNull"],"fields":"","values":false},"text":{},"textMode":"auto"},"pluginVersion":"8.1.5","targets":[{"exemplar":true,"expr":"sum(bbb_room_participants_gcount{job=\"$job\"})","interval":"","legendFormat":"","refId":"A"},{"hide":false,"refId":"B"}],"title":"Number of rooms (current)","type":"stat"},{"datasource":null,"fieldConfig":{"defaults":{"color":{"mode":"palette-classic"},"custom":{"axisLabel":"","axisPlacement":"auto","barAlignment":0,"drawStyle":"line","fillOpacity":28,"gradientMode":"opacity","hideFrom":{"legend":false,"tooltip":false,"viz":false},"lineInterpolation":"linear","lineWidth":1,"pointSize":5,"scaleDistribution":{"type":"linear"},"showPoints":"auto","spanNulls":false,"stacking":{"group":"A","mode":"none"},"thresholdsStyle":{"mode":"off"}},"mappings":[],"thresholds":{"mode":"absolute","steps":[{"color":"green","value":null},{"color":"red","value":80}]}},"overrides":[]},"gridPos":{"h":7,"w":19,"x":5,"y":11},"id":72,"options":{"legend":{"calcs":[],"displayMode":"list","placement":"bottom"},"tooltip":{"mode":"single"}},"targets":[{"exemplar":true,"expr":"sum(bbb_room_participants_gcount{job=\"$job\"})","interval":"","legendFormat":"Amount","refId":"A"}],"title":"Number of rooms","type":"timeseries"},{"datasource":null,"fieldConfig":{"defaults":{"color":{"mode":"palette-classic"},"custom":{"hideFrom":{"legend":false,"tooltip":false,"viz":false}},"mappings":[]},"overrides":[]},"gridPos":{"h":4,"w":5,"x":0,"y":14},"id":86,"options":{"legend":{"displayMode":"hidden","placement":"right"},"pieType":"donut","reduceOptions":{"calcs":["lastNotNull"],"fields":"","values":false},"tooltip":{"mode":"single"}},"targets":[{"exemplar":true,"expr":"bbb_room_participants_gcount{job=\"$job\"}","interval":"","legendFormat":"{{instance}}","refId":"A"}],"title":"Number of rooms - per server (current)","type":"piechart"},{"datasource":null,"fieldConfig":{"defaults":{"color":{"mode":"palette-classic"},"custom":{"axisLabel":"","axisPlacement":"auto","barAlignment":0,"drawStyle":"line","fillOpacity":11,"gradientMode":"opacity","hideFrom":{"legend":false,"tooltip":false,"viz":false},"lineInterpolation":"linear","lineStyle":{"fill":"solid"},"lineWidth":1,"pointSize":5,"scaleDistribution":{"type":"linear"},"showPoints":"auto","spanNulls":false,"stacking":{"group":"A","mode":"none"},"thresholdsStyle":{"mode":"off"}},"mappings":[],"thresholds":{"mode":"absolute","steps":[{"color":"green","value":null},{"color":"red","value":80}]}},"overrides":[]},"gridPos":{"h":8,"w":24,"x":0,"y":18},"id":78,"options":{"legend":{"calcs":[],"displayMode":"list","placement":"right"},"tooltip":{"mode":"single"}},"targets":[{"exemplar":true,"expr":"sum(bbb_meetings_participants_origin{job=\"$job\"}) by  (server)","interval":"","legendFormat":"{{server}}","refId":"A"}],"title":"Panel Title","type":"timeseries"},{"datasource":null,"fieldConfig":{"defaults":{"color":{"mode":"palette-classic"},"custom":{"axisLabel":"","axisPlacement":"auto","barAlignment":0,"drawStyle":"line","fillOpacity":0,"gradientMode":"none","hideFrom":{"legend":false,"tooltip":false,"viz":false},"lineInterpolation":"linear","lineWidth":1,"pointSize":5,"scaleDistribution":{"type":"linear"},"showPoints":"auto","spanNulls":false,"stacking":{"group":"A","mode":"none"},"thresholdsStyle":{"mode":"off"}},"mappings":[],"thresholds":{"mode":"absolute","steps":[{"color":"green","value":null},{"color":"red","value":80}]}},"overrides":[]},"gridPos":{"h":6,"w":24,"x":0,"y":26},"id":82,"options":{"legend":{"calcs":[],"displayMode":"list","placement":"bottom"},"tooltip":{"mode":"single"}},"targets":[{"exemplar":true,"expr":"sum(bbb_meetings_video_participants{job=\"$job\"})","interval":"","legendFormat":"Cam","refId":"A"}],"title":"Video","type":"timeseries"},{"datasource":null,"fieldConfig":{"defaults":{"color":{"mode":"palette-classic"},"custom":{"axisLabel":"","axisPlacement":"auto","barAlignment":0,"drawStyle":"line","fillOpacity":0,"gradientMode":"none","hideFrom":{"legend":false,"tooltip":false,"viz":false},"lineInterpolation":"linear","lineWidth":1,"pointSize":5,"scaleDistribution":{"type":"linear"},"showPoints":"auto","spanNulls":false,"stacking":{"group":"A","mode":"none"},"thresholdsStyle":{"mode":"off"}},"mappings":[],"thresholds":{"mode":"absolute","steps":[{"color":"green","value":null},{"color":"red","value":80}]}},"overrides":[]},"gridPos":{"h":6,"w":24,"x":0,"y":32},"id":80,"options":{"legend":{"calcs":[],"displayMode":"list","placement":"bottom"},"tooltip":{"mode":"single"}},"targets":[{"exemplar":true,"expr":"sum(bbb_meetings_voice_participants{job=\"$job\"})","interval":"","legendFormat":"Voice","refId":"A"}],"title":"Microphone connections","type":"timeseries"},{"aliasColors":{},"bars":false,"dashLength":10,"dashes":false,"datasource":"${datasource}","fill":1,"fillGradient":0,"gridPos":{"h":9,"w":24,"x":0,"y":38},"hiddenSeries":false,"id":61,"legend":{"alignAsTable":true,"avg":true,"current":true,"max":true,"min":true,"rightSide":false,"show":true,"total":false,"values":true},"lines":true,"linewidth":1,"nullPointMode":"null","options":{"alertThreshold":true},"percentage":false,"pluginVersion":"8.1.5","pointradius":2,"points":false,"renderer":"flot","seriesOverrides":[{"$$hashKey":"object:696","alias":"Participants","yaxis":2}],"spaceLength":10,"stack":false,"steppedLine":false,"targets":[{"exemplar":true,"expr":"sum(abs(netdata_net_net_kilobits_persec_average{job=\"$job_netdata\", family=\"enp175s0f1np1\"})) by (dimension)","hide":false,"interval":"","legendFormat":" {{dimension}}","refId":"A"},{"exemplar":true,"expr":"sum(bbb_meetings_participants{job=\"$job\"})","interval":"","legendFormat":"Participants","refId":"B"}],"thresholds":[],"timeFrom":null,"timeRegions":[],"timeShift":null,"title":"Network Utilization - public interface","tooltip":{"shared":true,"sort":0,"value_type":"individual"},"type":"graph","xaxis":{"buckets":null,"mode":"time","name":null,"show":true,"values":[]},"yaxes":[{"$$hashKey":"object:672","format":"Kbits","label":"Bandwidth","logBase":1,"max":null,"min":"0","show":true},{"$$hashKey":"object:673","format":"short","label":"Participants","logBase":1,"max":null,"min":null,"show":true}],"yaxis":{"align":false,"alignLevel":null}},{"collapsed":true,"datasource":null,"gridPos":{"h":1,"w":24,"x":0,"y":47},"id":28,"panels":[{"aliasColors":{},"bars":false,"dashLength":10,"dashes":false,"datasource":"$datasource","fill":1,"fillGradient":0,"gridPos":{"h":6,"w":24,"x":0,"y":2},"hiddenSeries":false,"id":8,"legend":{"alignAsTable":true,"avg":true,"current":true,"max":true,"min":true,"rightSide":true,"show":true,"sort":"current","sortDesc":true,"total":false,"values":true},"lines":true,"linewidth":1,"nullPointMode":"null","options":{"alertThreshold":true},"percentage":false,"pluginVersion":"8.1.4","pointradius":2,"points":false,"renderer":"flot","seriesOverrides":[],"spaceLength":10,"stack":false,"steppedLine":false,"targets":[{"expr":"bbb_meetings_video_participants{job=\"$job\"}","interval":"","legendFormat":"{{instance}}","refId":"A"}],"thresholds":[],"timeFrom":null,"timeRegions":[],"timeShift":null,"title":"Video Participants","tooltip":{"shared":true,"sort":0,"value_type":"individual"},"type":"graph","xaxis":{"buckets":null,"mode":"time","name":null,"show":true,"values":[]},"yaxes":[{"decimals":null,"format":"short","label":"Participants","logBase":1,"max":null,"min":"0","show":true},{"format":"short","label":null,"logBase":1,"max":null,"min":null,"show":true}],"yaxis":{"align":false,"alignLevel":null}},{"aliasColors":{},"bars":false,"dashLength":10,"dashes":false,"datasource":"$datasource","fill":1,"fillGradient":0,"gridPos":{"h":6,"w":24,"x":0,"y":8},"hiddenSeries":false,"id":2,"legend":{"alignAsTable":true,"avg":true,"current":true,"max":true,"min":true,"rightSide":true,"show":true,"sort":"current","sortDesc":true,"total":false,"values":true},"lines":true,"linewidth":1,"nullPointMode":"null","options":{"alertThreshold":true},"percentage":false,"pluginVersion":"8.1.4","pointradius":2,"points":false,"renderer":"flot","seriesOverrides":[],"spaceLength":10,"stack":false,"steppedLine":false,"targets":[{"exemplar":true,"expr":"bbb_meetings_participants{job=\"$job\"}","interval":"","legendFormat":"{{instance}}","refId":"A"}],"thresholds":[],"timeFrom":null,"timeRegions":[],"timeShift":null,"title":"Participants","tooltip":{"shared":true,"sort":0,"value_type":"individual"},"transformations":[{"id":"sortBy","options":{}}],"type":"graph","xaxis":{"buckets":null,"mode":"time","name":null,"show":true,"values":[]},"yaxes":[{"format":"short","label":"Participants","logBase":1,"max":null,"min":"0","show":true},{"format":"short","label":null,"logBase":1,"max":null,"min":null,"show":false}],"yaxis":{"align":false,"alignLevel":null}},{"aliasColors":{},"bars":false,"dashLength":10,"dashes":false,"datasource":"$datasource","fill":1,"fillGradient":0,"gridPos":{"h":6,"w":24,"x":0,"y":14},"hiddenSeries":false,"id":6,"legend":{"alignAsTable":true,"avg":true,"current":true,"max":true,"min":true,"rightSide":true,"show":true,"sort":"current","sortDesc":true,"total":false,"values":true},"lines":true,"linewidth":1,"nullPointMode":"null","options":{"alertThreshold":true},"percentage":false,"pluginVersion":"8.1.4","pointradius":2,"points":false,"renderer":"flot","seriesOverrides":[],"spaceLength":10,"stack":false,"steppedLine":false,"targets":[{"expr":"bbb_meetings_voice_participants{job=\"$job\"}","interval":"","legendFormat":"{{instance}}","refId":"A"}],"thresholds":[],"timeFrom":null,"timeRegions":[],"timeShift":null,"title":"Voice Participants","tooltip":{"shared":true,"sort":0,"value_type":"individual"},"type":"graph","xaxis":{"buckets":null,"mode":"time","name":null,"show":true,"values":[]},"yaxes":[{"format":"short","label":"Participants","logBase":1,"max":null,"min":"0","show":true},{"format":"short","label":null,"logBase":1,"max":null,"min":null,"show":false}],"yaxis":{"align":false,"alignLevel":null}},{"aliasColors":{},"bars":false,"dashLength":10,"dashes":false,"datasource":"$datasource","fill":1,"fillGradient":0,"gridPos":{"h":7,"w":24,"x":0,"y":20},"hiddenSeries":false,"id":52,"legend":{"alignAsTable":true,"avg":true,"current":true,"max":true,"min":true,"rightSide":true,"show":true,"sort":"current","sortDesc":true,"total":false,"values":true},"lines":true,"linewidth":1,"nullPointMode":"null","options":{"alertThreshold":true},"percentage":false,"pluginVersion":"8.1.4","pointradius":2,"points":false,"renderer":"flot","seriesOverrides":[],"spaceLength":10,"stack":false,"steppedLine":false,"targets":[{"expr":"bbb_room_participants_gcount{job=\"$job\"}","interval":"","legendFormat":"{{instance}}","refId":"A"}],"thresholds":[],"timeFrom":null,"timeRegions":[],"timeShift":null,"title":"Number of Rooms","tooltip":{"shared":true,"sort":0,"value_type":"individual"},"type":"graph","xaxis":{"buckets":null,"mode":"time","name":null,"show":true,"values":[]},"yaxes":[{"format":"short","label":"Rooms","logBase":1,"max":null,"min":"0","show":true},{"format":"short","label":null,"logBase":1,"max":null,"min":null,"show":true}],"yaxis":{"align":false,"alignLevel":null}},{"aliasColors":{},"bars":false,"dashLength":10,"dashes":false,"datasource":"$datasource","fill":1,"fillGradient":0,"gridPos":{"h":7,"w":24,"x":0,"y":27},"hiddenSeries":false,"id":64,"legend":{"alignAsTable":true,"avg":false,"current":true,"max":true,"min":true,"rightSide":true,"show":true,"sort":"current","sortDesc":true,"total":false,"values":true},"lines":true,"linewidth":1,"nullPointMode":"null","options":{"alertThreshold":true},"percentage":false,"pluginVersion":"8.1.4","pointradius":2,"points":false,"renderer":"flot","seriesOverrides":[],"spaceLength":10,"stack":false,"steppedLine":false,"targets":[{"exemplar":true,"expr":"bbb_meetings_participants_origin{job=\"$job\"}","interval":"","legendFormat":"{{instance}} - {{name}}","refId":"A"}],"thresholds":[],"timeFrom":null,"timeRegions":[],"timeShift":null,"title":"Participants Origin","tooltip":{"shared":true,"sort":0,"value_type":"individual"},"type":"graph","xaxis":{"buckets":null,"mode":"time","name":null,"show":true,"values":[]},"yaxes":[{"format":"short","label":"Participants","logBase":1,"max":null,"min":"0","show":true},{"format":"short","label":null,"logBase":1,"max":null,"min":null,"show":true}],"yaxis":{"align":false,"alignLevel":null}}],"title":"System details","type":"row"},{"collapsed":true,"datasource":null,"gridPos":{"h":1,"w":24,"x":0,"y":48},"id":90,"panels":[{"aliasColors":{},"bars":false,"dashLength":10,"dashes":false,"datasource":"$datasource","fill":1,"fillGradient":0,"gridPos":{"h":12,"w":24,"x":0,"y":3},"hiddenSeries":false,"id":55,"legend":{"alignAsTable":true,"avg":true,"current":true,"max":true,"min":false,"rightSide":true,"show":true,"sort":"current","sortDesc":true,"total":false,"values":true},"lines":true,"linewidth":1,"nullPointMode":"null","options":{"alertThreshold":true},"percentage":false,"pluginVersion":"8.1.4","pointradius":2,"points":false,"renderer":"flot","seriesOverrides":[],"spaceLength":10,"stack":false,"steppedLine":false,"targets":[{"exemplar":true,"expr":"(1 - avg(irate(node_cpu_seconds_total{mode=\"idle\", job=\"$job_node_exporter\"}[5m])) by (instance)) * 100","interval":"","legendFormat":"{{instance}} ","refId":"A"},{"exemplar":true,"expr":"sum(netdata_system_cpu_percentage_average{dimension!=\"idle\", job=\"$job_netdata\"}) by (instance)","hide":false,"instant":false,"interval":"","legendFormat":"{{instance}} ","refId":"B"}],"thresholds":[],"timeFrom":null,"timeRegions":[],"timeShift":null,"title":"CPU Utlization ","tooltip":{"shared":true,"sort":0,"value_type":"individual"},"type":"graph","xaxis":{"buckets":null,"mode":"time","name":null,"show":true,"values":[]},"yaxes":[{"format":"percent","label":"CPU Utlization [%]","logBase":1,"max":"100","min":"0","show":true},{"format":"short","label":null,"logBase":1,"max":null,"min":null,"show":true}],"yaxis":{"align":false,"alignLevel":null}},{"datasource":"$datasource","fieldConfig":{"defaults":{"color":{"mode":"thresholds"},"mappings":[],"thresholds":{"mode":"percentage","steps":[{"color":"green","value":null},{"color":"#EAB839","value":70},{"color":"red","value":90}]},"unit":"decgbytes"},"overrides":[]},"gridPos":{"h":7,"w":24,"x":0,"y":15},"id":57,"options":{"displayMode":"lcd","orientation":"vertical","reduceOptions":{"calcs":["lastNotNull"],"fields":"","values":false},"showUnfilled":true,"text":{}},"pluginVersion":"8.1.4","targets":[{"exemplar":true,"expr":"(sum(netdata_system_ram_MiB_average{job=\"$job_netdata\"}) by (instance) - sum(netdata_mem_available_MiB_average{job=\"$job_netdata\"}) by (instance)) / 1024 * 10","hide":false,"interval":"","legendFormat":"{{instance}} ","refId":"C"}],"timeFrom":null,"timeShift":null,"title":"Memory Utilization (RAM)","type":"bargauge"},{"datasource":null,"fieldConfig":{"defaults":{"color":{"mode":"thresholds"},"mappings":[],"thresholds":{"mode":"percentage","steps":[{"color":"green","value":null},{"color":"#EAB839","value":70},{"color":"red","value":90}]},"unit":"percent"},"overrides":[]},"gridPos":{"h":8,"w":24,"x":0,"y":22},"id":96,"options":{"displayMode":"lcd","orientation":"vertical","reduceOptions":{"calcs":["lastNotNull"],"fields":"","values":false},"showUnfilled":true,"text":{}},"pluginVersion":"8.1.4","targets":[{"exemplar":true,"expr":"(100 / sum(netdata_disk_space_GiB_average{dimension=\"avail\",family=\"/\",job=\"bbb_prod_netdata\"}) by (instance)) * sum(netdata_disk_space_GiB_average{dimension=\"used\",family=\"/\",job=\"bbb_prod_netdata\"} ) by (instance)","hide":false,"instant":false,"interval":"","legendFormat":"{{instance}}","refId":"A"},{"exemplar":true,"expr":"netdata_disk_space_GiB_average{dimension=\"used\",family=\"/\",job=\"bbb_prod_netdata\"}","hide":true,"interval":"","legendFormat":"","refId":"B"}],"title":"Disk usage (%)","transformations":[],"type":"bargauge"},{"aliasColors":{},"bars":false,"dashLength":10,"dashes":false,"datasource":null,"fill":1,"fillGradient":0,"gridPos":{"h":7,"w":24,"x":0,"y":30},"hiddenSeries":false,"id":94,"legend":{"alignAsTable":true,"avg":false,"current":true,"max":false,"min":false,"rightSide":true,"show":true,"sort":"current","sortDesc":true,"total":false,"values":true},"lines":true,"linewidth":1,"nullPointMode":"null","options":{"alertThreshold":true},"percentage":false,"pluginVersion":"8.1.4","pointradius":2,"points":false,"renderer":"flot","seriesOverrides":[],"spaceLength":10,"stack":false,"steppedLine":false,"targets":[{"exemplar":true,"expr":"abs(netdata_net_net_kilobits_persec_average{job=\"$job_netdata\", family=\"enp175s0f1np1\", dimension=\"received\"})","interval":"","legendFormat":"{{instance}}","refId":"A"}],"thresholds":[],"timeFrom":null,"timeRegions":[],"timeShift":null,"title":"Network - received data","tooltip":{"shared":true,"sort":0,"value_type":"individual"},"type":"graph","xaxis":{"buckets":null,"mode":"time","name":null,"show":true,"values":[]},"yaxes":[{"$$hashKey":"object:910","format":"Kbits","label":null,"logBase":1,"max":null,"min":null,"show":true},{"$$hashKey":"object:911","format":"short","label":null,"logBase":1,"max":null,"min":null,"show":true}],"yaxis":{"align":false,"alignLevel":null}},{"aliasColors":{},"bars":false,"dashLength":10,"dashes":false,"datasource":null,"fill":1,"fillGradient":0,"gridPos":{"h":7,"w":24,"x":0,"y":37},"hiddenSeries":false,"id":92,"legend":{"alignAsTable":true,"avg":false,"current":true,"max":false,"min":false,"rightSide":true,"show":true,"sort":"current","sortDesc":true,"total":false,"values":true},"lines":true,"linewidth":1,"nullPointMode":"null","options":{"alertThreshold":true},"percentage":false,"pluginVersion":"8.1.4","pointradius":2,"points":false,"renderer":"flot","seriesOverrides":[],"spaceLength":10,"stack":false,"steppedLine":false,"targets":[{"exemplar":true,"expr":"abs(netdata_net_net_kilobits_persec_average{job=\"$job_netdata\", family=\"enp175s0f1np1\", dimension=\"sent\"})","interval":"","legendFormat":"{{instance}}","refId":"A"}],"thresholds":[],"timeFrom":null,"timeRegions":[],"timeShift":null,"title":"Network - sent data","tooltip":{"shared":true,"sort":0,"value_type":"individual"},"transformations":[],"type":"graph","xaxis":{"buckets":null,"mode":"time","name":null,"show":true,"values":[]},"yaxes":[{"$$hashKey":"object:850","format":"Kbits","label":null,"logBase":1,"max":null,"min":null,"show":true},{"$$hashKey":"object:851","format":"short","label":null,"logBase":1,"max":null,"min":null,"show":true}],"yaxis":{"align":false,"alignLevel":null}}],"title":"Server details","type":"row"},{"collapsed":true,"datasource":null,"gridPos":{"h":1,"w":24,"x":0,"y":49},"id":32,"panels":[{"aliasColors":{},"bars":false,"cacheTimeout":null,"dashLength":10,"dashes":false,"datasource":"$datasource","fill":1,"fillGradient":0,"gridPos":{"h":11,"w":24,"x":0,"y":47},"hiddenSeries":false,"id":22,"legend":{"alignAsTable":true,"avg":true,"current":true,"max":true,"min":true,"rightSide":true,"show":true,"sort":"current","sortDesc":true,"total":false,"values":true},"lines":true,"linewidth":1,"links":[],"nullPointMode":"null","options":{"alertThreshold":true},"percentage":false,"pluginVersion":"8.1.4","pointradius":2,"points":false,"renderer":"flot","seriesOverrides":[],"spaceLength":10,"stack":false,"steppedLine":false,"targets":[{"exemplar":true,"expr":"histogram_quantile(0.95, sum(rate(bbb_api_latency_bucket{job=\"$job\", endpoint=\"getMeetings\"}[5m])) by (le, instance))","instant":false,"interval":"","intervalFactor":1,"legendFormat":"{{instance}}","refId":"A"},{"expr":"histogram_quantile(0.95, sum(rate(bbb_api_latency_bucket{job=\"$job\", endpoint=\"getRecordings\", parameters=\"state=processing\"}[5m])) by (le, instance))","hide":true,"interval":"","legendFormat":"{{instance}} - getRecordings processing","refId":"B"},{"expr":"histogram_quantile(0.95, sum(rate(bbb_api_latency_bucket{job=\"$job\", endpoint=\"getRecordings\", parameters=\"state=processed\"}[5m])) by (le, instance))","hide":true,"interval":"","legendFormat":"{{instance}} - getRecordings processed","refId":"C"},{"expr":"histogram_quantile(0.95, sum(rate(bbb_api_latency_bucket{job=\"$job\", endpoint=\"getRecordings\", parameters=\"state=published\"}[5m])) by (le, instance))","hide":true,"interval":"","legendFormat":"{{instance}} - getRecordings published","refId":"D"},{"expr":"histogram_quantile(0.95, sum(rate(bbb_api_latency_bucket{job=\"$job\", endpoint=\"getRecordings\", parameters=\"state=unpublished\"}[5m])) by (le, instance))","hide":true,"interval":"","legendFormat":"{{instance}} - getRecordings unpublished","refId":"E"},{"expr":"histogram_quantile(0.95, sum(rate(bbb_api_latency_bucket{job=\"$job\", endpoint=\"getRecordings\", parameters=\"state=deleted\"}[5m])) by (le, instance))","hide":true,"interval":"","legendFormat":"{{instance}} - getRecordings deleted","refId":"F"}],"thresholds":[],"timeFrom":null,"timeRegions":[],"timeShift":null,"title":"BigBlueButton API Response Time - getMeetings (95th Percentile)","tooltip":{"shared":true,"sort":0,"value_type":"individual"},"type":"graph","xaxis":{"buckets":null,"mode":"time","name":null,"show":true,"values":[]},"yaxes":[{"format":"s","label":"Resonse Time","logBase":1,"max":null,"min":null,"show":true},{"format":"short","label":null,"logBase":1,"max":null,"min":null,"show":false}],"yaxis":{"align":false,"alignLevel":null}},{"aliasColors":{},"bars":false,"dashLength":10,"dashes":false,"datasource":"$datasource","fill":1,"fillGradient":0,"gridPos":{"h":8,"w":24,"x":0,"y":58},"hiddenSeries":false,"id":36,"legend":{"alignAsTable":true,"avg":true,"current":true,"max":true,"min":true,"rightSide":true,"show":true,"sort":"current","sortDesc":true,"total":false,"values":true},"lines":true,"linewidth":1,"nullPointMode":"null","options":{"alertThreshold":true},"percentage":false,"pluginVersion":"8.1.4","pointradius":2,"points":false,"renderer":"flot","seriesOverrides":[],"spaceLength":10,"stack":false,"steppedLine":false,"targets":[{"expr":"sum(histogram_quantile(0.95, sum(rate(bbb_api_latency_bucket{job=\"$job\"}[5m])) by (le, instance, endpoint, parameters))) by (instance)","interval":"","legendFormat":"{{instance}}","refId":"A"}],"thresholds":[{"colorMode":"warning","fill":true,"line":true,"op":"gt","value":8,"yaxis":"left"},{"colorMode":"critical","fill":true,"line":true,"op":"gt","value":9,"yaxis":"left"}],"timeFrom":null,"timeRegions":[],"timeShift":null,"title":"Metrics Response Time (95th Percentile)","tooltip":{"shared":true,"sort":0,"value_type":"individual"},"transformations":[],"type":"graph","xaxis":{"buckets":null,"mode":"time","name":null,"show":true,"values":[]},"yaxes":[{"format":"s","label":"Response Time","logBase":1,"max":null,"min":"0","show":true},{"format":"short","label":null,"logBase":1,"max":null,"min":null,"show":true}],"yaxis":{"align":false,"alignLevel":null}},{"cacheTimeout":null,"datasource":"$datasource","fieldConfig":{"defaults":{"custom":{"align":null,"displayMode":"auto","filterable":false},"mappings":[],"thresholds":{"mode":"absolute","steps":[{"color":"green","value":null}]}},"overrides":[]},"gridPos":{"h":4,"w":7,"x":3,"y":66},"id":50,"links":[],"options":{"showHeader":true},"pluginVersion":"8.1.4","targets":[{"expr":"bbb_exporter{job=\"$job\"}","format":"table","instant":true,"interval":"","legendFormat":"","refId":"A"}],"timeFrom":null,"timeShift":null,"title":"BigBlueButton Exporter Version","transformations":[{"id":"filterFieldsByName","options":{"include":{"names":["instance","version"]}}},{"id":"organize","options":{"excludeByName":{},"indexByName":{},"renameByName":{"instance":"Instance"}}}],"type":"table"}],"title":"API","type":"row"},{"collapsed":true,"datasource":null,"gridPos":{"h":1,"w":24,"x":0,"y":50},"id":30,"panels":[{"datasource":null,"fieldConfig":{"defaults":{"custom":{"align":null,"displayMode":"auto","filterable":false},"mappings":[],"thresholds":{"mode":"absolute","steps":[{"color":"green","value":null}]},"unit":"percentunit"},"overrides":[]},"gridPos":{"h":22,"w":12,"x":0,"y":45},"id":63,"options":{"showHeader":true},"pluginVersion":"8.1.4","targets":[{"expr":"(node_filesystem_size_bytes{job=\"$job_node_exporter\"} - node_filesystem_avail_bytes{job=\"$job_node_exporter\"}) / node_filesystem_size_bytes{job=\"$job_node_exporter\"}","format":"table","hide":false,"instant":true,"interval":"","legendFormat":"","refId":"A"},{"expr":"1 - (netdata_disk_space_GiB_average{job=\"$job_netdata\", dimension=\"avail\"} / ignoring(dimension) (netdata_disk_space_GiB_average{job=\"$job_netdata\", dimension=\"avail\"} + ignoring(dimension) netdata_disk_space_GiB_average{job=\"$job_netdata\", dimension=\"used\"} + ignoring(dimension) netdata_disk_space_GiB_average{job=\"$job_netdata\", dimension=\"reserved for root\"}))","hide":true,"interval":"","legendFormat":"{{instance}} ({{family}})","refId":"B"}],"timeFrom":null,"timeShift":null,"title":"Storage Utilization","transformations":[{"id":"filterFieldsByName","options":{"include":{"names":["device","fstype","instance","Value","mountpoint"]}}},{"id":"organize","options":{"excludeByName":{},"indexByName":{"Value":4,"device":2,"fstype":3,"instance":0,"mountpoint":1},"renameByName":{"device":"Device","fstype":"FS Type","instance":"Instance","mountpoint":"Mountpoint"}}}],"type":"table"},{"datasource":"$datasource","fieldConfig":{"defaults":{"custom":{"align":null,"displayMode":"auto","filterable":false},"mappings":[],"thresholds":{"mode":"absolute","steps":[{"color":"green","value":null}]}},"overrides":[]},"gridPos":{"h":5,"w":6,"x":12,"y":45},"id":14,"options":{"showHeader":true},"pluginVersion":"8.1.4","targets":[{"expr":"label_replace(bbb_recordings_processing{job=\"$job\"}, \"name\", \"$1\", \"instance\", \"([a-zA-Z0-9-]*).*:.*\")","format":"table","instant":true,"interval":"","legendFormat":"","refId":"A"}],"timeFrom":null,"timeShift":null,"title":"Recordings Processing","transformations":[{"id":"filterFieldsByName","options":{"include":{"names":["instance","Value"]}}},{"id":"organize","options":{"excludeByName":{},"indexByName":{},"renameByName":{"instance":"Instance"}}}],"type":"table"},{"datasource":"$datasource","fieldConfig":{"defaults":{"custom":{"align":null,"displayMode":"auto","filterable":false},"mappings":[],"thresholds":{"mode":"absolute","steps":[{"color":"green","value":null}]}},"overrides":[]},"gridPos":{"h":5,"w":6,"x":18,"y":45},"id":58,"options":{"showHeader":true},"pluginVersion":"8.1.4","targets":[{"expr":"label_replace(bbb_recordings_unprocessed{job=\"$job\"}, \"name\", \"$1\", \"instance\", \"([a-zA-Z0-9-]*).*:.*\")","format":"table","instant":true,"interval":"","legendFormat":"","refId":"A"}],"timeFrom":null,"timeShift":null,"title":"Recordings Unprocessed","transformations":[{"id":"filterFieldsByName","options":{"include":{"names":["instance","Value"]}}},{"id":"organize","options":{"excludeByName":{},"indexByName":{},"renameByName":{"instance":"Instance"}}}],"type":"table"},{"datasource":"$datasource","fieldConfig":{"defaults":{"custom":{"align":null,"displayMode":"auto","filterable":false},"mappings":[],"thresholds":{"mode":"absolute","steps":[{"color":"green","value":null}]}},"overrides":[]},"gridPos":{"h":5,"w":6,"x":12,"y":50},"id":18,"options":{"showHeader":true},"pluginVersion":"8.1.4","targets":[{"expr":"label_replace(bbb_recordings_published{job=\"$job\"}, \"name\", \"$1\", \"instance\", \"([a-zA-Z0-9-]*).*:.*\")","format":"table","instant":true,"interval":"","legendFormat":"","refId":"A"}],"timeFrom":null,"timeShift":null,"title":"Recordings Published","transformations":[{"id":"filterFieldsByName","options":{"include":{"names":["instance","Value"]}}},{"id":"organize","options":{"excludeByName":{},"indexByName":{},"renameByName":{"instance":"Instance"}}}],"type":"table"},{"datasource":"$datasource","fieldConfig":{"defaults":{"custom":{"align":null,"displayMode":"auto","filterable":false},"mappings":[],"thresholds":{"mode":"absolute","steps":[{"color":"green","value":null}]}},"overrides":[]},"gridPos":{"h":5,"w":6,"x":18,"y":50},"id":10,"options":{"showHeader":true},"pluginVersion":"8.1.4","targets":[{"expr":"label_replace(bbb_recordings_deleted{job=\"$job\"}, \"name\", \"$1\", \"instance\", \"([a-zA-Z0-9-]*).*:.*\")","format":"table","instant":true,"interval":"","legendFormat":"","refId":"A"}],"timeFrom":null,"timeShift":null,"title":"Recordings Deleted","transformations":[{"id":"filterFieldsByName","options":{"include":{"names":["instance","Value"]}}},{"id":"organize","options":{"excludeByName":{},"indexByName":{},"renameByName":{"instance":"Instance"}}}],"type":"table"},{"datasource":"$datasource","fieldConfig":{"defaults":{"custom":{"align":null,"displayMode":"auto","filterable":false},"mappings":[],"thresholds":{"mode":"absolute","steps":[{"color":"green","value":null}]}},"overrides":[]},"gridPos":{"h":5,"w":6,"x":12,"y":55},"id":20,"options":{"showHeader":true},"pluginVersion":"8.1.4","targets":[{"expr":"label_replace(bbb_recordings_unpublished{job=\"$job\"}, \"name\", \"$1\", \"instance\", \"([a-zA-Z0-9-]*).*:.*\")","format":"table","instant":true,"interval":"","legendFormat":"","refId":"A"}],"timeFrom":null,"timeShift":null,"title":"Recordings Unpublished","transformations":[{"id":"filterFieldsByName","options":{"include":{"names":["instance","Value"]}}},{"id":"organize","options":{"excludeByName":{},"indexByName":{},"renameByName":{"instance":"Instance"}}}],"type":"table"},{"aliasColors":{},"bars":false,"dashLength":10,"dashes":false,"datasource":"$datasource","description":"Requires `RECORDINGS_METRICS_READ_FROM_DISK` to be enabled on the BigBlueButton Exporter","fill":1,"fillGradient":0,"gridPos":{"h":7,"w":12,"x":12,"y":60},"hiddenSeries":false,"id":60,"legend":{"alignAsTable":true,"avg":false,"current":true,"max":false,"min":false,"rightSide":true,"show":true,"total":false,"values":true},"lines":true,"linewidth":1,"nullPointMode":"null","options":{"alertThreshold":true},"percentage":false,"pluginVersion":"8.1.4","pointradius":2,"points":false,"renderer":"flot","seriesOverrides":[],"spaceLength":10,"stack":false,"steppedLine":false,"targets":[{"expr":"bbb_recordings_unprocessed{job=\"$job\"}","interval":"","legendFormat":"{{instance}}","refId":"A"}],"thresholds":[],"timeFrom":null,"timeRegions":[],"timeShift":null,"title":"Recordings Unprocessed","tooltip":{"shared":true,"sort":0,"value_type":"individual"},"type":"graph","xaxis":{"buckets":null,"mode":"time","name":null,"show":true,"values":[]},"yaxes":[{"format":"short","label":"Recordings ","logBase":1,"max":null,"min":"0","show":true},{"format":"short","label":null,"logBase":1,"max":null,"min":null,"show":true}],"yaxis":{"align":false,"alignLevel":null}}],"title":"Recordings","type":"row"},{"collapsed":true,"datasource":null,"gridPos":{"h":1,"w":24,"x":0,"y":51},"id":44,"panels":[{"cacheTimeout":null,"cards":{"cardPadding":null,"cardRound":null},"color":{"cardColor":"#b4ff00","colorScale":"linear","colorScheme":"interpolateGnBu","exponent":0.5,"mode":"spectrum"},"dataFormat":"tsbuckets","datasource":"$datasource","description":"Buckets (Y axis) represents the number of participants while the count in each bucket represents the number of rooms with that particular bucket's value. ","gridPos":{"h":10,"w":12,"x":0,"y":46},"heatmap":{},"hideZeroBuckets":true,"highlightCards":true,"id":40,"legend":{"show":true},"links":[],"pluginVersion":"6.7.2","reverseYBuckets":false,"targets":[{"expr":"sum by (le) (bbb_room_participants_bucket{job=\"$job\"})","format":"heatmap","instant":false,"interval":"","legendFormat":"{{le}}","refId":"A"}],"timeFrom":null,"timeShift":null,"title":"Heatmap of Room Participants","tooltip":{"show":true,"showHistogram":false},"type":"heatmap","xAxis":{"show":true},"xBucketNumber":null,"xBucketSize":null,"yAxis":{"decimals":null,"format":"short","logBase":1,"max":null,"min":null,"show":true,"splitFactor":null},"yBucketBound":"auto","yBucketNumber":null,"yBucketSize":null},{"cacheTimeout":null,"cards":{"cardPadding":null,"cardRound":null},"color":{"cardColor":"#b4ff00","colorScale":"linear","colorScheme":"interpolateGnBu","exponent":0.5,"mode":"spectrum"},"dataFormat":"tsbuckets","datasource":"$datasource","description":"Buckets (Y axis) represents the number of listeners while the count in each bucket represents the number of rooms with that particular bucket's value. ","gridPos":{"h":10,"w":12,"x":12,"y":46},"heatmap":{},"hideZeroBuckets":true,"highlightCards":true,"id":42,"legend":{"show":true},"links":[],"pluginVersion":"6.7.2","reverseYBuckets":false,"targets":[{"expr":"sum by (le) (bbb_room_listeners_bucket{job=\"$job\"})","format":"heatmap","instant":false,"interval":"","legendFormat":"{{le}}","refId":"A"}],"timeFrom":null,"timeShift":null,"title":"Heatmap of Listeners Participants","tooltip":{"show":true,"showHistogram":false},"type":"heatmap","xAxis":{"show":true},"xBucketNumber":null,"xBucketSize":null,"yAxis":{"decimals":null,"format":"short","logBase":1,"max":null,"min":null,"show":true,"splitFactor":null},"yBucketBound":"auto","yBucketNumber":null,"yBucketSize":null},{"cacheTimeout":null,"cards":{"cardPadding":null,"cardRound":null},"color":{"cardColor":"#b4ff00","colorScale":"linear","colorScheme":"interpolateGnBu","exponent":0.5,"mode":"spectrum"},"dataFormat":"tsbuckets","datasource":"$datasource","description":"Buckets (Y axis) represents the number of voice participants while the count in each bucket represents the number of rooms with that particular bucket's value. ","gridPos":{"h":10,"w":12,"x":0,"y":56},"heatmap":{},"hideZeroBuckets":true,"highlightCards":true,"id":46,"legend":{"show":true},"links":[],"pluginVersion":"6.7.2","reverseYBuckets":false,"targets":[{"expr":"sum by (le) (bbb_room_voice_participants_bucket{job=\"$job\"})","format":"heatmap","instant":false,"interval":"","legendFormat":"{{le}}","refId":"A"}],"timeFrom":null,"timeShift":null,"title":"Heatmap of Voice Participants","tooltip":{"show":true,"showHistogram":false},"type":"heatmap","xAxis":{"show":true},"xBucketNumber":null,"xBucketSize":null,"yAxis":{"decimals":null,"format":"short","logBase":1,"max":null,"min":null,"show":true,"splitFactor":null},"yBucketBound":"auto","yBucketNumber":null,"yBucketSize":null},{"cacheTimeout":null,"cards":{"cardPadding":null,"cardRound":null},"color":{"cardColor":"#b4ff00","colorScale":"linear","colorScheme":"interpolateGnBu","exponent":0.5,"mode":"spectrum"},"dataFormat":"tsbuckets","datasource":"$datasource","description":"Buckets (Y axis) represents the number of video participants while the count in each bucket represents the number of rooms with that particular bucket's value. ","gridPos":{"h":10,"w":12,"x":12,"y":56},"heatmap":{},"hideZeroBuckets":true,"highlightCards":true,"id":48,"legend":{"show":true},"links":[],"pluginVersion":"6.7.2","reverseYBuckets":false,"targets":[{"expr":"sum by (le) (bbb_room_video_participants_bucket{job=\"$job\"})","format":"heatmap","instant":false,"interval":"","legendFormat":"{{le}}","refId":"A"}],"timeFrom":null,"timeShift":null,"title":"Heatmap of Video Participants","tooltip":{"show":true,"showHistogram":false},"type":"heatmap","xAxis":{"show":true},"xBucketNumber":null,"xBucketSize":null,"yAxis":{"decimals":null,"format":"short","logBase":1,"max":null,"min":null,"show":true,"splitFactor":null},"yBucketBound":"auto","yBucketNumber":null,"yBucketSize":null}],"title":"Heatmaps","type":"row"}],"refresh":"10s","schemaVersion":30,"style":"dark","tags":["BigBlueButton","prometheus"],"templating":{"list":[{"current":{"selected":false,"text":"Prometheus","value":"Prometheus"},"description":null,"error":null,"hide":0,"includeAll":false,"label":"Datasource","multi":false,"name":"datasource","options":[],"query":"prometheus","queryValue":"","refresh":1,"regex":"","skipUrlSync":false,"type":"datasource"},{"allValue":null,"current":{"selected":false,"text":"bbb_prod","value":"bbb_prod"},"datasource":"$datasource","definition":"label_values(bbb_exporter, job)","description":null,"error":null,"hide":0,"includeAll":false,"label":"Job","multi":false,"name":"job","options":[],"query":{"query":"label_values(bbb_exporter, job)","refId":"Prometheus-job-Variable-Query"},"refresh":1,"regex":"","skipUrlSync":false,"sort":0,"tagValuesQuery":"","tagsQuery":"","type":"query","useTags":false},{"allValue":null,"current":{"isNone":true,"selected":false,"text":"None","value":""},"datasource":"$datasource","definition":"label_values(node_cpu_seconds_total, job)","description":null,"error":null,"hide":0,"includeAll":false,"label":"Job node_exporter","multi":false,"name":"job_node_exporter","options":[],"query":{"query":"label_values(node_cpu_seconds_total, job)","refId":"Prometheus-job_node_exporter-Variable-Query"},"refresh":1,"regex":"","skipUrlSync":false,"sort":0,"tagValuesQuery":"","tagsQuery":"","type":"query","useTags":false},{"allValue":null,"current":{"selected":true,"text":"bbb_prod_netdata","value":"bbb_prod_netdata"},"datasource":"$datasource","definition":"label_values(netdata_system_cpu_percentage_average, job)","description":null,"error":null,"hide":0,"includeAll":false,"label":"Job Netdata","multi":false,"name":"job_netdata","options":[],"query":{"query":"label_values(netdata_system_cpu_percentage_average, job)","refId":"Prometheus-job_netdata-Variable-Query"},"refresh":1,"regex":"","skipUrlSync":false,"sort":0,"tagValuesQuery":"","tagsQuery":"","type":"query","useTags":false},{"allValue":null,"current":{"isNone":true,"selected":false,"text":"None","value":""},"datasource":"$datasource","definition":"label_values(node_network_address_assign_type, device)","description":null,"error":null,"hide":0,"includeAll":false,"label":"Network Interface","multi":false,"name":"interface","options":[],"query":{"query":"label_values(node_network_address_assign_type, device)","refId":"Prometheus-interface-Variable-Query"},"refresh":2,"regex":"","skipUrlSync":false,"sort":0,"tagValuesQuery":"","tagsQuery":"","type":"query","useTags":false},{"datasource":"$datasource","description":null,"error":null,"filters":[],"hide":0,"label":null,"name":"Filters","skipUrlSync":false,"type":"adhoc"}]},"time":{"from":"now-6h","to":"now"},"timepicker":{"refresh_intervals":["10s","30s","1m","5m","15m","30m","1h","2h","1d"]},"timezone":"","title":"BigBlueButton Universe","uid":"HIbd_CXZz","version":18}}
+{
+   "dashboard" : {
+      "annotations" : {
+         "list" : [
+            {
+               "datasource" : "-- Grafana --",
+               "enable" : true,
+               "hide" : false,
+               "iconColor" : "rgba(255, 96, 96, 1)",
+               "limit" : 100,
+               "matchAny" : true,
+               "name" : "Annotation Tag note",
+               "showIn" : 0,
+               "tags" : [
+                  "note"
+               ],
+               "target" : {
+                  "limit" : 100,
+                  "matchAny" : true,
+                  "tags" : [
+                     "note"
+                  ],
+                  "type" : "tags"
+               },
+               "type" : "tags"
+            },
+            {
+               "builtIn" : 1,
+               "datasource" : "-- Grafana --",
+               "enable" : true,
+               "hide" : true,
+               "iconColor" : "rgba(0, 211, 255, 1)",
+               "name" : "Annotations & Alerts",
+               "target" : {
+                  "limit" : 100,
+                  "matchAny" : false,
+                  "tags" : [],
+                  "type" : "dashboard"
+               },
+               "type" : "dashboard"
+            }
+         ]
+      },
+      "editable" : true,
+      "gnetId" : null,
+      "graphTooltip" : 0,
+      "id" : 5,
+      "iteration" : 1632756661972,
+      "links" : [],
+      "panels" : [
+         {
+            "collapsed" : false,
+            "datasource" : null,
+            "gridPos" : {
+               "h" : 1,
+               "w" : 24,
+               "x" : 0,
+               "y" : 0
+            },
+            "id" : 66,
+            "panels" : [],
+            "title" : "Overview",
+            "type" : "row"
+         },
+         {
+            "datasource" : null,
+            "fieldConfig" : {
+               "defaults" : {
+                  "color" : {
+                     "mode" : "thresholds"
+                  },
+                  "mappings" : [
+                     {
+                        "options" : {
+                           "0" : {
+                              "index" : 1,
+                              "text" : "Off"
+                           },
+                           "1" : {
+                              "index" : 0,
+                              "text" : "On"
+                           }
+                        },
+                        "type" : "value"
+                     }
+                  ],
+                  "thresholds" : {
+                     "mode" : "absolute",
+                     "steps" : [
+                        {
+                           "color" : "green",
+                           "value" : null
+                        },
+                        {
+                           "color" : "dark-red",
+                           "value" : 0
+                        },
+                        {
+                           "color" : "semi-dark-green",
+                           "value" : 1
+                        }
+                     ]
+                  }
+               },
+               "overrides" : []
+            },
+            "gridPos" : {
+               "h" : 3,
+               "w" : 24,
+               "x" : 0,
+               "y" : 1
+            },
+            "id" : 88,
+            "options" : {
+               "reduceOptions" : {
+                  "calcs" : [
+                     "lastNotNull"
+                  ],
+                  "fields" : "",
+                  "values" : false
+               },
+               "showThresholdLabels" : false,
+               "showThresholdMarkers" : false,
+               "text" : {}
+            },
+            "pluginVersion" : "8.1.5",
+            "targets" : [
+               {
+                  "exemplar" : true,
+                  "expr" : "bbb_api_up{job=\"$job\"}",
+                  "interval" : "",
+                  "legendFormat" : "{{instance}}",
+                  "refId" : "A"
+               }
+            ],
+            "title" : "Status",
+            "transformations" : [
+               {
+                  "id" : "sortBy",
+                  "options" : {
+                     "fields" : {},
+                     "sort" : [
+                        {
+                           "desc" : false,
+                           "field" : "bbb101.uni-graz.at:443"
+                        }
+                     ]
+                  }
+               }
+            ],
+            "type" : "gauge"
+         },
+         {
+            "datasource" : null,
+            "fieldConfig" : {
+               "defaults" : {
+                  "color" : {
+                     "mode" : "thresholds"
+                  },
+                  "mappings" : [],
+                  "thresholds" : {
+                     "mode" : "absolute",
+                     "steps" : [
+                        {
+                           "color" : "green",
+                           "value" : null
+                        },
+                        {
+                           "color" : "#EAB839",
+                           "value" : 4000
+                        },
+                        {
+                           "color" : "red",
+                           "value" : 5000
+                        }
+                     ]
+                  }
+               },
+               "overrides" : []
+            },
+            "gridPos" : {
+               "h" : 3,
+               "w" : 5,
+               "x" : 0,
+               "y" : 4
+            },
+            "id" : 76,
+            "options" : {
+               "colorMode" : "value",
+               "graphMode" : "none",
+               "justifyMode" : "auto",
+               "orientation" : "auto",
+               "reduceOptions" : {
+                  "calcs" : [
+                     "lastNotNull"
+                  ],
+                  "fields" : "",
+                  "values" : false
+               },
+               "text" : {},
+               "textMode" : "auto"
+            },
+            "pluginVersion" : "8.1.5",
+            "targets" : [
+               {
+                  "exemplar" : true,
+                  "expr" : "sum(bbb_meetings_participants{job=\"$job\"})",
+                  "interval" : "",
+                  "legendFormat" : "",
+                  "refId" : "A"
+               }
+            ],
+            "title" : "Number of participants (current)",
+            "type" : "stat"
+         },
+         {
+            "datasource" : null,
+            "fieldConfig" : {
+               "defaults" : {
+                  "color" : {
+                     "mode" : "palette-classic"
+                  },
+                  "custom" : {
+                     "axisLabel" : "",
+                     "axisPlacement" : "auto",
+                     "barAlignment" : 0,
+                     "drawStyle" : "line",
+                     "fillOpacity" : 20,
+                     "gradientMode" : "opacity",
+                     "hideFrom" : {
+                        "legend" : false,
+                        "tooltip" : false,
+                        "viz" : false
+                     },
+                     "lineInterpolation" : "linear",
+                     "lineWidth" : 1,
+                     "pointSize" : 5,
+                     "scaleDistribution" : {
+                        "type" : "linear"
+                     },
+                     "showPoints" : "auto",
+                     "spanNulls" : false,
+                     "stacking" : {
+                        "group" : "A",
+                        "mode" : "none"
+                     },
+                     "thresholdsStyle" : {
+                        "mode" : "off"
+                     }
+                  },
+                  "mappings" : [],
+                  "thresholds" : {
+                     "mode" : "absolute",
+                     "steps" : [
+                        {
+                           "color" : "green",
+                           "value" : null
+                        },
+                        {
+                           "color" : "red",
+                           "value" : 80
+                        }
+                     ]
+                  }
+               },
+               "overrides" : []
+            },
+            "gridPos" : {
+               "h" : 7,
+               "w" : 19,
+               "x" : 5,
+               "y" : 4
+            },
+            "id" : 68,
+            "options" : {
+               "legend" : {
+                  "calcs" : [],
+                  "displayMode" : "list",
+                  "placement" : "bottom"
+               },
+               "tooltip" : {
+                  "mode" : "single"
+               }
+            },
+            "pluginVersion" : "8.1.4",
+            "targets" : [
+               {
+                  "exemplar" : true,
+                  "expr" : "sum(bbb_meetings_participants{job=\"$job\"})",
+                  "instant" : false,
+                  "interval" : "",
+                  "legendFormat" : "Amount",
+                  "refId" : "A"
+               }
+            ],
+            "title" : "Number of participants",
+            "type" : "timeseries"
+         },
+         {
+            "datasource" : null,
+            "fieldConfig" : {
+               "defaults" : {
+                  "color" : {
+                     "mode" : "palette-classic"
+                  },
+                  "custom" : {
+                     "hideFrom" : {
+                        "legend" : false,
+                        "tooltip" : false,
+                        "viz" : false
+                     }
+                  },
+                  "mappings" : []
+               },
+               "overrides" : []
+            },
+            "gridPos" : {
+               "h" : 4,
+               "w" : 5,
+               "x" : 0,
+               "y" : 7
+            },
+            "id" : 84,
+            "options" : {
+               "legend" : {
+                  "displayMode" : "hidden",
+                  "placement" : "right",
+                  "values" : [
+                     "percent"
+                  ]
+               },
+               "pieType" : "donut",
+               "reduceOptions" : {
+                  "calcs" : [
+                     "lastNotNull"
+                  ],
+                  "fields" : "",
+                  "values" : false
+               },
+               "tooltip" : {
+                  "mode" : "multi"
+               }
+            },
+            "targets" : [
+               {
+                  "exemplar" : true,
+                  "expr" : "bbb_meetings_participants{job=\"$job\"}",
+                  "interval" : "",
+                  "legendFormat" : "{{instance}}",
+                  "refId" : "A"
+               }
+            ],
+            "title" : "Number of participants - per server (current)",
+            "type" : "piechart"
+         },
+         {
+            "datasource" : null,
+            "fieldConfig" : {
+               "defaults" : {
+                  "color" : {
+                     "mode" : "thresholds"
+                  },
+                  "mappings" : [],
+                  "thresholds" : {
+                     "mode" : "absolute",
+                     "steps" : [
+                        {
+                           "color" : "green",
+                           "value" : null
+                        },
+                        {
+                           "color" : "red",
+                           "value" : 80
+                        }
+                     ]
+                  }
+               },
+               "overrides" : []
+            },
+            "gridPos" : {
+               "h" : 3,
+               "w" : 5,
+               "x" : 0,
+               "y" : 11
+            },
+            "id" : 74,
+            "options" : {
+               "colorMode" : "value",
+               "graphMode" : "none",
+               "justifyMode" : "auto",
+               "orientation" : "auto",
+               "reduceOptions" : {
+                  "calcs" : [
+                     "lastNotNull"
+                  ],
+                  "fields" : "",
+                  "values" : false
+               },
+               "text" : {},
+               "textMode" : "auto"
+            },
+            "pluginVersion" : "8.1.5",
+            "targets" : [
+               {
+                  "exemplar" : true,
+                  "expr" : "sum(bbb_room_participants_gcount{job=\"$job\"})",
+                  "interval" : "",
+                  "legendFormat" : "",
+                  "refId" : "A"
+               },
+               {
+                  "hide" : false,
+                  "refId" : "B"
+               }
+            ],
+            "title" : "Number of rooms (current)",
+            "type" : "stat"
+         },
+         {
+            "datasource" : null,
+            "fieldConfig" : {
+               "defaults" : {
+                  "color" : {
+                     "mode" : "palette-classic"
+                  },
+                  "custom" : {
+                     "axisLabel" : "",
+                     "axisPlacement" : "auto",
+                     "barAlignment" : 0,
+                     "drawStyle" : "line",
+                     "fillOpacity" : 28,
+                     "gradientMode" : "opacity",
+                     "hideFrom" : {
+                        "legend" : false,
+                        "tooltip" : false,
+                        "viz" : false
+                     },
+                     "lineInterpolation" : "linear",
+                     "lineWidth" : 1,
+                     "pointSize" : 5,
+                     "scaleDistribution" : {
+                        "type" : "linear"
+                     },
+                     "showPoints" : "auto",
+                     "spanNulls" : false,
+                     "stacking" : {
+                        "group" : "A",
+                        "mode" : "none"
+                     },
+                     "thresholdsStyle" : {
+                        "mode" : "off"
+                     }
+                  },
+                  "mappings" : [],
+                  "thresholds" : {
+                     "mode" : "absolute",
+                     "steps" : [
+                        {
+                           "color" : "green",
+                           "value" : null
+                        },
+                        {
+                           "color" : "red",
+                           "value" : 80
+                        }
+                     ]
+                  }
+               },
+               "overrides" : []
+            },
+            "gridPos" : {
+               "h" : 7,
+               "w" : 19,
+               "x" : 5,
+               "y" : 11
+            },
+            "id" : 72,
+            "options" : {
+               "legend" : {
+                  "calcs" : [],
+                  "displayMode" : "list",
+                  "placement" : "bottom"
+               },
+               "tooltip" : {
+                  "mode" : "single"
+               }
+            },
+            "targets" : [
+               {
+                  "exemplar" : true,
+                  "expr" : "sum(bbb_room_participants_gcount{job=\"$job\"})",
+                  "interval" : "",
+                  "legendFormat" : "Amount",
+                  "refId" : "A"
+               }
+            ],
+            "title" : "Number of rooms",
+            "type" : "timeseries"
+         },
+         {
+            "datasource" : null,
+            "fieldConfig" : {
+               "defaults" : {
+                  "color" : {
+                     "mode" : "palette-classic"
+                  },
+                  "custom" : {
+                     "hideFrom" : {
+                        "legend" : false,
+                        "tooltip" : false,
+                        "viz" : false
+                     }
+                  },
+                  "mappings" : []
+               },
+               "overrides" : []
+            },
+            "gridPos" : {
+               "h" : 4,
+               "w" : 5,
+               "x" : 0,
+               "y" : 14
+            },
+            "id" : 86,
+            "options" : {
+               "legend" : {
+                  "displayMode" : "hidden",
+                  "placement" : "right"
+               },
+               "pieType" : "donut",
+               "reduceOptions" : {
+                  "calcs" : [
+                     "lastNotNull"
+                  ],
+                  "fields" : "",
+                  "values" : false
+               },
+               "tooltip" : {
+                  "mode" : "single"
+               }
+            },
+            "targets" : [
+               {
+                  "exemplar" : true,
+                  "expr" : "bbb_room_participants_gcount{job=\"$job\"}",
+                  "interval" : "",
+                  "legendFormat" : "{{instance}}",
+                  "refId" : "A"
+               }
+            ],
+            "title" : "Number of rooms - per server (current)",
+            "type" : "piechart"
+         },
+         {
+            "datasource" : null,
+            "fieldConfig" : {
+               "defaults" : {
+                  "color" : {
+                     "mode" : "palette-classic"
+                  },
+                  "custom" : {
+                     "axisLabel" : "",
+                     "axisPlacement" : "auto",
+                     "barAlignment" : 0,
+                     "drawStyle" : "line",
+                     "fillOpacity" : 11,
+                     "gradientMode" : "opacity",
+                     "hideFrom" : {
+                        "legend" : false,
+                        "tooltip" : false,
+                        "viz" : false
+                     },
+                     "lineInterpolation" : "linear",
+                     "lineStyle" : {
+                        "fill" : "solid"
+                     },
+                     "lineWidth" : 1,
+                     "pointSize" : 5,
+                     "scaleDistribution" : {
+                        "type" : "linear"
+                     },
+                     "showPoints" : "auto",
+                     "spanNulls" : false,
+                     "stacking" : {
+                        "group" : "A",
+                        "mode" : "none"
+                     },
+                     "thresholdsStyle" : {
+                        "mode" : "off"
+                     }
+                  },
+                  "mappings" : [],
+                  "thresholds" : {
+                     "mode" : "absolute",
+                     "steps" : [
+                        {
+                           "color" : "green",
+                           "value" : null
+                        },
+                        {
+                           "color" : "red",
+                           "value" : 80
+                        }
+                     ]
+                  }
+               },
+               "overrides" : []
+            },
+            "gridPos" : {
+               "h" : 8,
+               "w" : 24,
+               "x" : 0,
+               "y" : 18
+            },
+            "id" : 78,
+            "options" : {
+               "legend" : {
+                  "calcs" : [],
+                  "displayMode" : "list",
+                  "placement" : "right"
+               },
+               "tooltip" : {
+                  "mode" : "single"
+               }
+            },
+            "targets" : [
+               {
+                  "exemplar" : true,
+                  "expr" : "sum(bbb_meetings_participants_origin{job=\"$job\"}) by  (server)",
+                  "interval" : "",
+                  "legendFormat" : "{{server}}",
+                  "refId" : "A"
+               }
+            ],
+            "title" : "Panel Title",
+            "type" : "timeseries"
+         },
+         {
+            "datasource" : null,
+            "fieldConfig" : {
+               "defaults" : {
+                  "color" : {
+                     "mode" : "palette-classic"
+                  },
+                  "custom" : {
+                     "axisLabel" : "",
+                     "axisPlacement" : "auto",
+                     "barAlignment" : 0,
+                     "drawStyle" : "line",
+                     "fillOpacity" : 0,
+                     "gradientMode" : "none",
+                     "hideFrom" : {
+                        "legend" : false,
+                        "tooltip" : false,
+                        "viz" : false
+                     },
+                     "lineInterpolation" : "linear",
+                     "lineWidth" : 1,
+                     "pointSize" : 5,
+                     "scaleDistribution" : {
+                        "type" : "linear"
+                     },
+                     "showPoints" : "auto",
+                     "spanNulls" : false,
+                     "stacking" : {
+                        "group" : "A",
+                        "mode" : "none"
+                     },
+                     "thresholdsStyle" : {
+                        "mode" : "off"
+                     }
+                  },
+                  "mappings" : [],
+                  "thresholds" : {
+                     "mode" : "absolute",
+                     "steps" : [
+                        {
+                           "color" : "green",
+                           "value" : null
+                        },
+                        {
+                           "color" : "red",
+                           "value" : 80
+                        }
+                     ]
+                  }
+               },
+               "overrides" : []
+            },
+            "gridPos" : {
+               "h" : 6,
+               "w" : 24,
+               "x" : 0,
+               "y" : 26
+            },
+            "id" : 82,
+            "options" : {
+               "legend" : {
+                  "calcs" : [],
+                  "displayMode" : "list",
+                  "placement" : "bottom"
+               },
+               "tooltip" : {
+                  "mode" : "single"
+               }
+            },
+            "targets" : [
+               {
+                  "exemplar" : true,
+                  "expr" : "sum(bbb_meetings_video_participants{job=\"$job\"})",
+                  "interval" : "",
+                  "legendFormat" : "Cam",
+                  "refId" : "A"
+               }
+            ],
+            "title" : "Video",
+            "type" : "timeseries"
+         },
+         {
+            "datasource" : null,
+            "fieldConfig" : {
+               "defaults" : {
+                  "color" : {
+                     "mode" : "palette-classic"
+                  },
+                  "custom" : {
+                     "axisLabel" : "",
+                     "axisPlacement" : "auto",
+                     "barAlignment" : 0,
+                     "drawStyle" : "line",
+                     "fillOpacity" : 0,
+                     "gradientMode" : "none",
+                     "hideFrom" : {
+                        "legend" : false,
+                        "tooltip" : false,
+                        "viz" : false
+                     },
+                     "lineInterpolation" : "linear",
+                     "lineWidth" : 1,
+                     "pointSize" : 5,
+                     "scaleDistribution" : {
+                        "type" : "linear"
+                     },
+                     "showPoints" : "auto",
+                     "spanNulls" : false,
+                     "stacking" : {
+                        "group" : "A",
+                        "mode" : "none"
+                     },
+                     "thresholdsStyle" : {
+                        "mode" : "off"
+                     }
+                  },
+                  "mappings" : [],
+                  "thresholds" : {
+                     "mode" : "absolute",
+                     "steps" : [
+                        {
+                           "color" : "green",
+                           "value" : null
+                        },
+                        {
+                           "color" : "red",
+                           "value" : 80
+                        }
+                     ]
+                  }
+               },
+               "overrides" : []
+            },
+            "gridPos" : {
+               "h" : 6,
+               "w" : 24,
+               "x" : 0,
+               "y" : 32
+            },
+            "id" : 80,
+            "options" : {
+               "legend" : {
+                  "calcs" : [],
+                  "displayMode" : "list",
+                  "placement" : "bottom"
+               },
+               "tooltip" : {
+                  "mode" : "single"
+               }
+            },
+            "targets" : [
+               {
+                  "exemplar" : true,
+                  "expr" : "sum(bbb_meetings_voice_participants{job=\"$job\"})",
+                  "interval" : "",
+                  "legendFormat" : "Voice",
+                  "refId" : "A"
+               }
+            ],
+            "title" : "Microphone connections",
+            "type" : "timeseries"
+         },
+         {
+            "aliasColors" : {},
+            "bars" : false,
+            "dashLength" : 10,
+            "dashes" : false,
+            "datasource" : "${datasource}",
+            "fill" : 1,
+            "fillGradient" : 0,
+            "gridPos" : {
+               "h" : 9,
+               "w" : 24,
+               "x" : 0,
+               "y" : 38
+            },
+            "hiddenSeries" : false,
+            "id" : 61,
+            "legend" : {
+               "alignAsTable" : true,
+               "avg" : true,
+               "current" : true,
+               "max" : true,
+               "min" : true,
+               "rightSide" : false,
+               "show" : true,
+               "total" : false,
+               "values" : true
+            },
+            "lines" : true,
+            "linewidth" : 1,
+            "nullPointMode" : "null",
+            "options" : {
+               "alertThreshold" : true
+            },
+            "percentage" : false,
+            "pluginVersion" : "8.1.5",
+            "pointradius" : 2,
+            "points" : false,
+            "renderer" : "flot",
+            "seriesOverrides" : [
+               {
+                  "$$hashKey" : "object:696",
+                  "alias" : "Participants",
+                  "yaxis" : 2
+               }
+            ],
+            "spaceLength" : 10,
+            "stack" : false,
+            "steppedLine" : false,
+            "targets" : [
+               {
+                  "exemplar" : true,
+                  "expr" : "sum(abs(netdata_net_net_kilobits_persec_average{job=\"$job_netdata\", family=\"enp175s0f1np1\"})) by (dimension)",
+                  "hide" : false,
+                  "interval" : "",
+                  "legendFormat" : " {{dimension}}",
+                  "refId" : "A"
+               },
+               {
+                  "exemplar" : true,
+                  "expr" : "sum(bbb_meetings_participants{job=\"$job\"})",
+                  "interval" : "",
+                  "legendFormat" : "Participants",
+                  "refId" : "B"
+               }
+            ],
+            "thresholds" : [],
+            "timeFrom" : null,
+            "timeRegions" : [],
+            "timeShift" : null,
+            "title" : "Network Utilization - public interface",
+            "tooltip" : {
+               "shared" : true,
+               "sort" : 0,
+               "value_type" : "individual"
+            },
+            "type" : "graph",
+            "xaxis" : {
+               "buckets" : null,
+               "mode" : "time",
+               "name" : null,
+               "show" : true,
+               "values" : []
+            },
+            "yaxes" : [
+               {
+                  "$$hashKey" : "object:672",
+                  "format" : "Kbits",
+                  "label" : "Bandwidth",
+                  "logBase" : 1,
+                  "max" : null,
+                  "min" : "0",
+                  "show" : true
+               },
+               {
+                  "$$hashKey" : "object:673",
+                  "format" : "short",
+                  "label" : "Participants",
+                  "logBase" : 1,
+                  "max" : null,
+                  "min" : null,
+                  "show" : true
+               }
+            ],
+            "yaxis" : {
+               "align" : false,
+               "alignLevel" : null
+            }
+         },
+         {
+            "collapsed" : true,
+            "datasource" : null,
+            "gridPos" : {
+               "h" : 1,
+               "w" : 24,
+               "x" : 0,
+               "y" : 47
+            },
+            "id" : 28,
+            "panels" : [
+               {
+                  "aliasColors" : {},
+                  "bars" : false,
+                  "dashLength" : 10,
+                  "dashes" : false,
+                  "datasource" : "$datasource",
+                  "fill" : 1,
+                  "fillGradient" : 0,
+                  "gridPos" : {
+                     "h" : 6,
+                     "w" : 24,
+                     "x" : 0,
+                     "y" : 2
+                  },
+                  "hiddenSeries" : false,
+                  "id" : 8,
+                  "legend" : {
+                     "alignAsTable" : true,
+                     "avg" : true,
+                     "current" : true,
+                     "max" : true,
+                     "min" : true,
+                     "rightSide" : true,
+                     "show" : true,
+                     "sort" : "current",
+                     "sortDesc" : true,
+                     "total" : false,
+                     "values" : true
+                  },
+                  "lines" : true,
+                  "linewidth" : 1,
+                  "nullPointMode" : "null",
+                  "options" : {
+                     "alertThreshold" : true
+                  },
+                  "percentage" : false,
+                  "pluginVersion" : "8.1.5",
+                  "pointradius" : 2,
+                  "points" : false,
+                  "renderer" : "flot",
+                  "seriesOverrides" : [],
+                  "spaceLength" : 10,
+                  "stack" : false,
+                  "steppedLine" : false,
+                  "targets" : [
+                     {
+                        "expr" : "bbb_meetings_video_participants{job=\"$job\"}",
+                        "interval" : "",
+                        "legendFormat" : "{{instance}}",
+                        "refId" : "A"
+                     }
+                  ],
+                  "thresholds" : [],
+                  "timeFrom" : null,
+                  "timeRegions" : [],
+                  "timeShift" : null,
+                  "title" : "Video Participants",
+                  "tooltip" : {
+                     "shared" : true,
+                     "sort" : 0,
+                     "value_type" : "individual"
+                  },
+                  "type" : "graph",
+                  "xaxis" : {
+                     "buckets" : null,
+                     "mode" : "time",
+                     "name" : null,
+                     "show" : true,
+                     "values" : []
+                  },
+                  "yaxes" : [
+                     {
+                        "decimals" : null,
+                        "format" : "short",
+                        "label" : "Participants",
+                        "logBase" : 1,
+                        "max" : null,
+                        "min" : "0",
+                        "show" : true
+                     },
+                     {
+                        "format" : "short",
+                        "label" : null,
+                        "logBase" : 1,
+                        "max" : null,
+                        "min" : null,
+                        "show" : true
+                     }
+                  ],
+                  "yaxis" : {
+                     "align" : false,
+                     "alignLevel" : null
+                  }
+               },
+               {
+                  "aliasColors" : {},
+                  "bars" : false,
+                  "dashLength" : 10,
+                  "dashes" : false,
+                  "datasource" : "$datasource",
+                  "fill" : 1,
+                  "fillGradient" : 0,
+                  "gridPos" : {
+                     "h" : 6,
+                     "w" : 24,
+                     "x" : 0,
+                     "y" : 8
+                  },
+                  "hiddenSeries" : false,
+                  "id" : 2,
+                  "legend" : {
+                     "alignAsTable" : true,
+                     "avg" : true,
+                     "current" : true,
+                     "max" : true,
+                     "min" : true,
+                     "rightSide" : true,
+                     "show" : true,
+                     "sort" : "current",
+                     "sortDesc" : true,
+                     "total" : false,
+                     "values" : true
+                  },
+                  "lines" : true,
+                  "linewidth" : 1,
+                  "nullPointMode" : "null",
+                  "options" : {
+                     "alertThreshold" : true
+                  },
+                  "percentage" : false,
+                  "pluginVersion" : "8.1.5",
+                  "pointradius" : 2,
+                  "points" : false,
+                  "renderer" : "flot",
+                  "seriesOverrides" : [],
+                  "spaceLength" : 10,
+                  "stack" : false,
+                  "steppedLine" : false,
+                  "targets" : [
+                     {
+                        "exemplar" : true,
+                        "expr" : "bbb_meetings_participants{job=\"$job\"}",
+                        "interval" : "",
+                        "legendFormat" : "{{instance}}",
+                        "refId" : "A"
+                     }
+                  ],
+                  "thresholds" : [],
+                  "timeFrom" : null,
+                  "timeRegions" : [],
+                  "timeShift" : null,
+                  "title" : "Participants",
+                  "tooltip" : {
+                     "shared" : true,
+                     "sort" : 0,
+                     "value_type" : "individual"
+                  },
+                  "transformations" : [
+                     {
+                        "id" : "sortBy",
+                        "options" : {}
+                     }
+                  ],
+                  "type" : "graph",
+                  "xaxis" : {
+                     "buckets" : null,
+                     "mode" : "time",
+                     "name" : null,
+                     "show" : true,
+                     "values" : []
+                  },
+                  "yaxes" : [
+                     {
+                        "format" : "short",
+                        "label" : "Participants",
+                        "logBase" : 1,
+                        "max" : null,
+                        "min" : "0",
+                        "show" : true
+                     },
+                     {
+                        "format" : "short",
+                        "label" : null,
+                        "logBase" : 1,
+                        "max" : null,
+                        "min" : null,
+                        "show" : false
+                     }
+                  ],
+                  "yaxis" : {
+                     "align" : false,
+                     "alignLevel" : null
+                  }
+               },
+               {
+                  "aliasColors" : {},
+                  "bars" : false,
+                  "dashLength" : 10,
+                  "dashes" : false,
+                  "datasource" : "$datasource",
+                  "fill" : 1,
+                  "fillGradient" : 0,
+                  "gridPos" : {
+                     "h" : 6,
+                     "w" : 24,
+                     "x" : 0,
+                     "y" : 14
+                  },
+                  "hiddenSeries" : false,
+                  "id" : 6,
+                  "legend" : {
+                     "alignAsTable" : true,
+                     "avg" : true,
+                     "current" : true,
+                     "max" : true,
+                     "min" : true,
+                     "rightSide" : true,
+                     "show" : true,
+                     "sort" : "current",
+                     "sortDesc" : true,
+                     "total" : false,
+                     "values" : true
+                  },
+                  "lines" : true,
+                  "linewidth" : 1,
+                  "nullPointMode" : "null",
+                  "options" : {
+                     "alertThreshold" : true
+                  },
+                  "percentage" : false,
+                  "pluginVersion" : "8.1.5",
+                  "pointradius" : 2,
+                  "points" : false,
+                  "renderer" : "flot",
+                  "seriesOverrides" : [],
+                  "spaceLength" : 10,
+                  "stack" : false,
+                  "steppedLine" : false,
+                  "targets" : [
+                     {
+                        "expr" : "bbb_meetings_voice_participants{job=\"$job\"}",
+                        "interval" : "",
+                        "legendFormat" : "{{instance}}",
+                        "refId" : "A"
+                     }
+                  ],
+                  "thresholds" : [],
+                  "timeFrom" : null,
+                  "timeRegions" : [],
+                  "timeShift" : null,
+                  "title" : "Voice Participants",
+                  "tooltip" : {
+                     "shared" : true,
+                     "sort" : 0,
+                     "value_type" : "individual"
+                  },
+                  "type" : "graph",
+                  "xaxis" : {
+                     "buckets" : null,
+                     "mode" : "time",
+                     "name" : null,
+                     "show" : true,
+                     "values" : []
+                  },
+                  "yaxes" : [
+                     {
+                        "format" : "short",
+                        "label" : "Participants",
+                        "logBase" : 1,
+                        "max" : null,
+                        "min" : "0",
+                        "show" : true
+                     },
+                     {
+                        "format" : "short",
+                        "label" : null,
+                        "logBase" : 1,
+                        "max" : null,
+                        "min" : null,
+                        "show" : false
+                     }
+                  ],
+                  "yaxis" : {
+                     "align" : false,
+                     "alignLevel" : null
+                  }
+               },
+               {
+                  "aliasColors" : {},
+                  "bars" : false,
+                  "dashLength" : 10,
+                  "dashes" : false,
+                  "datasource" : "$datasource",
+                  "fill" : 1,
+                  "fillGradient" : 0,
+                  "gridPos" : {
+                     "h" : 7,
+                     "w" : 24,
+                     "x" : 0,
+                     "y" : 20
+                  },
+                  "hiddenSeries" : false,
+                  "id" : 52,
+                  "legend" : {
+                     "alignAsTable" : true,
+                     "avg" : true,
+                     "current" : true,
+                     "max" : true,
+                     "min" : true,
+                     "rightSide" : true,
+                     "show" : true,
+                     "sort" : "current",
+                     "sortDesc" : true,
+                     "total" : false,
+                     "values" : true
+                  },
+                  "lines" : true,
+                  "linewidth" : 1,
+                  "nullPointMode" : "null",
+                  "options" : {
+                     "alertThreshold" : true
+                  },
+                  "percentage" : false,
+                  "pluginVersion" : "8.1.5",
+                  "pointradius" : 2,
+                  "points" : false,
+                  "renderer" : "flot",
+                  "seriesOverrides" : [],
+                  "spaceLength" : 10,
+                  "stack" : false,
+                  "steppedLine" : false,
+                  "targets" : [
+                     {
+                        "expr" : "bbb_room_participants_gcount{job=\"$job\"}",
+                        "interval" : "",
+                        "legendFormat" : "{{instance}}",
+                        "refId" : "A"
+                     }
+                  ],
+                  "thresholds" : [],
+                  "timeFrom" : null,
+                  "timeRegions" : [],
+                  "timeShift" : null,
+                  "title" : "Number of Rooms",
+                  "tooltip" : {
+                     "shared" : true,
+                     "sort" : 0,
+                     "value_type" : "individual"
+                  },
+                  "type" : "graph",
+                  "xaxis" : {
+                     "buckets" : null,
+                     "mode" : "time",
+                     "name" : null,
+                     "show" : true,
+                     "values" : []
+                  },
+                  "yaxes" : [
+                     {
+                        "format" : "short",
+                        "label" : "Rooms",
+                        "logBase" : 1,
+                        "max" : null,
+                        "min" : "0",
+                        "show" : true
+                     },
+                     {
+                        "format" : "short",
+                        "label" : null,
+                        "logBase" : 1,
+                        "max" : null,
+                        "min" : null,
+                        "show" : true
+                     }
+                  ],
+                  "yaxis" : {
+                     "align" : false,
+                     "alignLevel" : null
+                  }
+               },
+               {
+                  "aliasColors" : {},
+                  "bars" : false,
+                  "dashLength" : 10,
+                  "dashes" : false,
+                  "datasource" : "$datasource",
+                  "fill" : 1,
+                  "fillGradient" : 0,
+                  "gridPos" : {
+                     "h" : 7,
+                     "w" : 24,
+                     "x" : 0,
+                     "y" : 27
+                  },
+                  "hiddenSeries" : false,
+                  "id" : 64,
+                  "legend" : {
+                     "alignAsTable" : true,
+                     "avg" : false,
+                     "current" : true,
+                     "max" : true,
+                     "min" : true,
+                     "rightSide" : true,
+                     "show" : true,
+                     "sort" : "current",
+                     "sortDesc" : true,
+                     "total" : false,
+                     "values" : true
+                  },
+                  "lines" : true,
+                  "linewidth" : 1,
+                  "nullPointMode" : "null",
+                  "options" : {
+                     "alertThreshold" : true
+                  },
+                  "percentage" : false,
+                  "pluginVersion" : "8.1.5",
+                  "pointradius" : 2,
+                  "points" : false,
+                  "renderer" : "flot",
+                  "seriesOverrides" : [],
+                  "spaceLength" : 10,
+                  "stack" : false,
+                  "steppedLine" : false,
+                  "targets" : [
+                     {
+                        "exemplar" : true,
+                        "expr" : "bbb_meetings_participants_origin{job=\"$job\"}",
+                        "interval" : "",
+                        "legendFormat" : "{{instance}} - {{name}}",
+                        "refId" : "A"
+                     }
+                  ],
+                  "thresholds" : [],
+                  "timeFrom" : null,
+                  "timeRegions" : [],
+                  "timeShift" : null,
+                  "title" : "Participants Origin",
+                  "tooltip" : {
+                     "shared" : true,
+                     "sort" : 0,
+                     "value_type" : "individual"
+                  },
+                  "type" : "graph",
+                  "xaxis" : {
+                     "buckets" : null,
+                     "mode" : "time",
+                     "name" : null,
+                     "show" : true,
+                     "values" : []
+                  },
+                  "yaxes" : [
+                     {
+                        "format" : "short",
+                        "label" : "Participants",
+                        "logBase" : 1,
+                        "max" : null,
+                        "min" : "0",
+                        "show" : true
+                     },
+                     {
+                        "format" : "short",
+                        "label" : null,
+                        "logBase" : 1,
+                        "max" : null,
+                        "min" : null,
+                        "show" : true
+                     }
+                  ],
+                  "yaxis" : {
+                     "align" : false,
+                     "alignLevel" : null
+                  }
+               }
+            ],
+            "title" : "BigBlueButton details",
+            "type" : "row"
+         },
+         {
+            "collapsed" : true,
+            "datasource" : null,
+            "gridPos" : {
+               "h" : 1,
+               "w" : 24,
+               "x" : 0,
+               "y" : 48
+            },
+            "id" : 90,
+            "panels" : [
+               {
+                  "aliasColors" : {},
+                  "bars" : false,
+                  "dashLength" : 10,
+                  "dashes" : false,
+                  "datasource" : "$datasource",
+                  "fill" : 1,
+                  "fillGradient" : 0,
+                  "gridPos" : {
+                     "h" : 12,
+                     "w" : 24,
+                     "x" : 0,
+                     "y" : 3
+                  },
+                  "hiddenSeries" : false,
+                  "id" : 55,
+                  "legend" : {
+                     "alignAsTable" : true,
+                     "avg" : true,
+                     "current" : true,
+                     "max" : true,
+                     "min" : false,
+                     "rightSide" : true,
+                     "show" : true,
+                     "sort" : "current",
+                     "sortDesc" : true,
+                     "total" : false,
+                     "values" : true
+                  },
+                  "lines" : true,
+                  "linewidth" : 1,
+                  "nullPointMode" : "null",
+                  "options" : {
+                     "alertThreshold" : true
+                  },
+                  "percentage" : false,
+                  "pluginVersion" : "8.1.5",
+                  "pointradius" : 2,
+                  "points" : false,
+                  "renderer" : "flot",
+                  "seriesOverrides" : [],
+                  "spaceLength" : 10,
+                  "stack" : false,
+                  "steppedLine" : false,
+                  "targets" : [
+                     {
+                        "exemplar" : true,
+                        "expr" : "(1 - avg(irate(node_cpu_seconds_total{mode=\"idle\", job=\"$job_node_exporter\"}[5m])) by (instance)) * 100",
+                        "interval" : "",
+                        "legendFormat" : "{{instance}} ",
+                        "refId" : "A"
+                     },
+                     {
+                        "exemplar" : true,
+                        "expr" : "sum(netdata_system_cpu_percentage_average{dimension!=\"idle\", job=\"$job_netdata\"}) by (instance)",
+                        "hide" : false,
+                        "instant" : false,
+                        "interval" : "",
+                        "legendFormat" : "{{instance}} ",
+                        "refId" : "B"
+                     }
+                  ],
+                  "thresholds" : [],
+                  "timeFrom" : null,
+                  "timeRegions" : [],
+                  "timeShift" : null,
+                  "title" : "CPU Utlization ",
+                  "tooltip" : {
+                     "shared" : true,
+                     "sort" : 0,
+                     "value_type" : "individual"
+                  },
+                  "type" : "graph",
+                  "xaxis" : {
+                     "buckets" : null,
+                     "mode" : "time",
+                     "name" : null,
+                     "show" : true,
+                     "values" : []
+                  },
+                  "yaxes" : [
+                     {
+                        "format" : "percent",
+                        "label" : "CPU Utlization [%]",
+                        "logBase" : 1,
+                        "max" : "100",
+                        "min" : "0",
+                        "show" : true
+                     },
+                     {
+                        "format" : "short",
+                        "label" : null,
+                        "logBase" : 1,
+                        "max" : null,
+                        "min" : null,
+                        "show" : true
+                     }
+                  ],
+                  "yaxis" : {
+                     "align" : false,
+                     "alignLevel" : null
+                  }
+               },
+               {
+                  "datasource" : "$datasource",
+                  "fieldConfig" : {
+                     "defaults" : {
+                        "color" : {
+                           "mode" : "thresholds"
+                        },
+                        "mappings" : [],
+                        "thresholds" : {
+                           "mode" : "percentage",
+                           "steps" : [
+                              {
+                                 "color" : "green",
+                                 "value" : null
+                              },
+                              {
+                                 "color" : "#EAB839",
+                                 "value" : 70
+                              },
+                              {
+                                 "color" : "red",
+                                 "value" : 90
+                              }
+                           ]
+                        },
+                        "unit" : "decgbytes"
+                     },
+                     "overrides" : []
+                  },
+                  "gridPos" : {
+                     "h" : 7,
+                     "w" : 24,
+                     "x" : 0,
+                     "y" : 15
+                  },
+                  "id" : 57,
+                  "options" : {
+                     "displayMode" : "lcd",
+                     "orientation" : "vertical",
+                     "reduceOptions" : {
+                        "calcs" : [
+                           "lastNotNull"
+                        ],
+                        "fields" : "",
+                        "values" : false
+                     },
+                     "showUnfilled" : true,
+                     "text" : {}
+                  },
+                  "pluginVersion" : "8.1.5",
+                  "targets" : [
+                     {
+                        "exemplar" : true,
+                        "expr" : "(sum(netdata_system_ram_MiB_average{job=\"$job_netdata\"}) by (instance) - sum(netdata_mem_available_MiB_average{job=\"$job_netdata\"}) by (instance)) / 1024 * 10",
+                        "hide" : false,
+                        "interval" : "",
+                        "legendFormat" : "{{instance}} ",
+                        "refId" : "C"
+                     }
+                  ],
+                  "timeFrom" : null,
+                  "timeShift" : null,
+                  "title" : "Memory Utilization (RAM)",
+                  "type" : "bargauge"
+               },
+               {
+                  "datasource" : null,
+                  "fieldConfig" : {
+                     "defaults" : {
+                        "color" : {
+                           "mode" : "thresholds"
+                        },
+                        "mappings" : [],
+                        "thresholds" : {
+                           "mode" : "percentage",
+                           "steps" : [
+                              {
+                                 "color" : "green",
+                                 "value" : null
+                              },
+                              {
+                                 "color" : "#EAB839",
+                                 "value" : 70
+                              },
+                              {
+                                 "color" : "red",
+                                 "value" : 90
+                              }
+                           ]
+                        },
+                        "unit" : "percent"
+                     },
+                     "overrides" : []
+                  },
+                  "gridPos" : {
+                     "h" : 8,
+                     "w" : 24,
+                     "x" : 0,
+                     "y" : 22
+                  },
+                  "id" : 96,
+                  "options" : {
+                     "displayMode" : "lcd",
+                     "orientation" : "vertical",
+                     "reduceOptions" : {
+                        "calcs" : [
+                           "lastNotNull"
+                        ],
+                        "fields" : "",
+                        "values" : false
+                     },
+                     "showUnfilled" : true,
+                     "text" : {}
+                  },
+                  "pluginVersion" : "8.1.5",
+                  "targets" : [
+                     {
+                        "exemplar" : true,
+                        "expr" : "(100 / sum(netdata_disk_space_GiB_average{dimension=\"avail\",family=\"/\",job=\"bbb_prod_netdata\"}) by (instance)) * sum(netdata_disk_space_GiB_average{dimension=\"used\",family=\"/\",job=\"bbb_prod_netdata\"} ) by (instance)",
+                        "hide" : false,
+                        "instant" : false,
+                        "interval" : "",
+                        "legendFormat" : "{{instance}}",
+                        "refId" : "A"
+                     },
+                     {
+                        "exemplar" : true,
+                        "expr" : "netdata_disk_space_GiB_average{dimension=\"used\",family=\"/\",job=\"bbb_prod_netdata\"}",
+                        "hide" : true,
+                        "interval" : "",
+                        "legendFormat" : "",
+                        "refId" : "B"
+                     }
+                  ],
+                  "title" : "Disk usage (%)",
+                  "transformations" : [],
+                  "type" : "bargauge"
+               },
+               {
+                  "aliasColors" : {},
+                  "bars" : false,
+                  "dashLength" : 10,
+                  "dashes" : false,
+                  "datasource" : null,
+                  "fill" : 1,
+                  "fillGradient" : 0,
+                  "gridPos" : {
+                     "h" : 7,
+                     "w" : 24,
+                     "x" : 0,
+                     "y" : 30
+                  },
+                  "hiddenSeries" : false,
+                  "id" : 94,
+                  "legend" : {
+                     "alignAsTable" : true,
+                     "avg" : false,
+                     "current" : true,
+                     "max" : false,
+                     "min" : false,
+                     "rightSide" : true,
+                     "show" : true,
+                     "sort" : "current",
+                     "sortDesc" : true,
+                     "total" : false,
+                     "values" : true
+                  },
+                  "lines" : true,
+                  "linewidth" : 1,
+                  "nullPointMode" : "null",
+                  "options" : {
+                     "alertThreshold" : true
+                  },
+                  "percentage" : false,
+                  "pluginVersion" : "8.1.5",
+                  "pointradius" : 2,
+                  "points" : false,
+                  "renderer" : "flot",
+                  "seriesOverrides" : [],
+                  "spaceLength" : 10,
+                  "stack" : false,
+                  "steppedLine" : false,
+                  "targets" : [
+                     {
+                        "exemplar" : true,
+                        "expr" : "abs(netdata_net_net_kilobits_persec_average{job=\"$job_netdata\", family=\"enp175s0f1np1\", dimension=\"received\"})",
+                        "interval" : "",
+                        "legendFormat" : "{{instance}}",
+                        "refId" : "A"
+                     }
+                  ],
+                  "thresholds" : [],
+                  "timeFrom" : null,
+                  "timeRegions" : [],
+                  "timeShift" : null,
+                  "title" : "Network - received data",
+                  "tooltip" : {
+                     "shared" : true,
+                     "sort" : 0,
+                     "value_type" : "individual"
+                  },
+                  "type" : "graph",
+                  "xaxis" : {
+                     "buckets" : null,
+                     "mode" : "time",
+                     "name" : null,
+                     "show" : true,
+                     "values" : []
+                  },
+                  "yaxes" : [
+                     {
+                        "$$hashKey" : "object:910",
+                        "format" : "Kbits",
+                        "label" : null,
+                        "logBase" : 1,
+                        "max" : null,
+                        "min" : null,
+                        "show" : true
+                     },
+                     {
+                        "$$hashKey" : "object:911",
+                        "format" : "short",
+                        "label" : null,
+                        "logBase" : 1,
+                        "max" : null,
+                        "min" : null,
+                        "show" : true
+                     }
+                  ],
+                  "yaxis" : {
+                     "align" : false,
+                     "alignLevel" : null
+                  }
+               },
+               {
+                  "aliasColors" : {},
+                  "bars" : false,
+                  "dashLength" : 10,
+                  "dashes" : false,
+                  "datasource" : null,
+                  "fill" : 1,
+                  "fillGradient" : 0,
+                  "gridPos" : {
+                     "h" : 7,
+                     "w" : 24,
+                     "x" : 0,
+                     "y" : 37
+                  },
+                  "hiddenSeries" : false,
+                  "id" : 92,
+                  "legend" : {
+                     "alignAsTable" : true,
+                     "avg" : false,
+                     "current" : true,
+                     "max" : false,
+                     "min" : false,
+                     "rightSide" : true,
+                     "show" : true,
+                     "sort" : "current",
+                     "sortDesc" : true,
+                     "total" : false,
+                     "values" : true
+                  },
+                  "lines" : true,
+                  "linewidth" : 1,
+                  "nullPointMode" : "null",
+                  "options" : {
+                     "alertThreshold" : true
+                  },
+                  "percentage" : false,
+                  "pluginVersion" : "8.1.5",
+                  "pointradius" : 2,
+                  "points" : false,
+                  "renderer" : "flot",
+                  "seriesOverrides" : [],
+                  "spaceLength" : 10,
+                  "stack" : false,
+                  "steppedLine" : false,
+                  "targets" : [
+                     {
+                        "exemplar" : true,
+                        "expr" : "abs(netdata_net_net_kilobits_persec_average{job=\"$job_netdata\", family=\"enp175s0f1np1\", dimension=\"sent\"})",
+                        "interval" : "",
+                        "legendFormat" : "{{instance}}",
+                        "refId" : "A"
+                     }
+                  ],
+                  "thresholds" : [],
+                  "timeFrom" : null,
+                  "timeRegions" : [],
+                  "timeShift" : null,
+                  "title" : "Network - sent data",
+                  "tooltip" : {
+                     "shared" : true,
+                     "sort" : 0,
+                     "value_type" : "individual"
+                  },
+                  "transformations" : [],
+                  "type" : "graph",
+                  "xaxis" : {
+                     "buckets" : null,
+                     "mode" : "time",
+                     "name" : null,
+                     "show" : true,
+                     "values" : []
+                  },
+                  "yaxes" : [
+                     {
+                        "$$hashKey" : "object:850",
+                        "format" : "Kbits",
+                        "label" : null,
+                        "logBase" : 1,
+                        "max" : null,
+                        "min" : null,
+                        "show" : true
+                     },
+                     {
+                        "$$hashKey" : "object:851",
+                        "format" : "short",
+                        "label" : null,
+                        "logBase" : 1,
+                        "max" : null,
+                        "min" : null,
+                        "show" : true
+                     }
+                  ],
+                  "yaxis" : {
+                     "align" : false,
+                     "alignLevel" : null
+                  }
+               }
+            ],
+            "title" : "Host details",
+            "type" : "row"
+         },
+         {
+            "collapsed" : true,
+            "datasource" : null,
+            "gridPos" : {
+               "h" : 1,
+               "w" : 24,
+               "x" : 0,
+               "y" : 49
+            },
+            "id" : 32,
+            "panels" : [
+               {
+                  "aliasColors" : {},
+                  "bars" : false,
+                  "cacheTimeout" : null,
+                  "dashLength" : 10,
+                  "dashes" : false,
+                  "datasource" : "$datasource",
+                  "fill" : 1,
+                  "fillGradient" : 0,
+                  "gridPos" : {
+                     "h" : 11,
+                     "w" : 24,
+                     "x" : 0,
+                     "y" : 4
+                  },
+                  "hiddenSeries" : false,
+                  "id" : 22,
+                  "legend" : {
+                     "alignAsTable" : true,
+                     "avg" : true,
+                     "current" : true,
+                     "max" : true,
+                     "min" : true,
+                     "rightSide" : true,
+                     "show" : true,
+                     "sort" : "current",
+                     "sortDesc" : true,
+                     "total" : false,
+                     "values" : true
+                  },
+                  "lines" : true,
+                  "linewidth" : 1,
+                  "links" : [],
+                  "nullPointMode" : "null",
+                  "options" : {
+                     "alertThreshold" : true
+                  },
+                  "percentage" : false,
+                  "pluginVersion" : "8.1.5",
+                  "pointradius" : 2,
+                  "points" : false,
+                  "renderer" : "flot",
+                  "seriesOverrides" : [],
+                  "spaceLength" : 10,
+                  "stack" : false,
+                  "steppedLine" : false,
+                  "targets" : [
+                     {
+                        "exemplar" : true,
+                        "expr" : "histogram_quantile(0.95, sum(rate(bbb_api_latency_bucket{job=\"$job\", endpoint=\"getMeetings\"}[5m])) by (le, instance))",
+                        "instant" : false,
+                        "interval" : "",
+                        "intervalFactor" : 1,
+                        "legendFormat" : "{{instance}}",
+                        "refId" : "A"
+                     },
+                     {
+                        "expr" : "histogram_quantile(0.95, sum(rate(bbb_api_latency_bucket{job=\"$job\", endpoint=\"getRecordings\", parameters=\"state=processing\"}[5m])) by (le, instance))",
+                        "hide" : true,
+                        "interval" : "",
+                        "legendFormat" : "{{instance}} - getRecordings processing",
+                        "refId" : "B"
+                     },
+                     {
+                        "expr" : "histogram_quantile(0.95, sum(rate(bbb_api_latency_bucket{job=\"$job\", endpoint=\"getRecordings\", parameters=\"state=processed\"}[5m])) by (le, instance))",
+                        "hide" : true,
+                        "interval" : "",
+                        "legendFormat" : "{{instance}} - getRecordings processed",
+                        "refId" : "C"
+                     },
+                     {
+                        "expr" : "histogram_quantile(0.95, sum(rate(bbb_api_latency_bucket{job=\"$job\", endpoint=\"getRecordings\", parameters=\"state=published\"}[5m])) by (le, instance))",
+                        "hide" : true,
+                        "interval" : "",
+                        "legendFormat" : "{{instance}} - getRecordings published",
+                        "refId" : "D"
+                     },
+                     {
+                        "expr" : "histogram_quantile(0.95, sum(rate(bbb_api_latency_bucket{job=\"$job\", endpoint=\"getRecordings\", parameters=\"state=unpublished\"}[5m])) by (le, instance))",
+                        "hide" : true,
+                        "interval" : "",
+                        "legendFormat" : "{{instance}} - getRecordings unpublished",
+                        "refId" : "E"
+                     },
+                     {
+                        "expr" : "histogram_quantile(0.95, sum(rate(bbb_api_latency_bucket{job=\"$job\", endpoint=\"getRecordings\", parameters=\"state=deleted\"}[5m])) by (le, instance))",
+                        "hide" : true,
+                        "interval" : "",
+                        "legendFormat" : "{{instance}} - getRecordings deleted",
+                        "refId" : "F"
+                     }
+                  ],
+                  "thresholds" : [],
+                  "timeFrom" : null,
+                  "timeRegions" : [],
+                  "timeShift" : null,
+                  "title" : "BigBlueButton API Response Time - getMeetings (95th Percentile)",
+                  "tooltip" : {
+                     "shared" : true,
+                     "sort" : 0,
+                     "value_type" : "individual"
+                  },
+                  "type" : "graph",
+                  "xaxis" : {
+                     "buckets" : null,
+                     "mode" : "time",
+                     "name" : null,
+                     "show" : true,
+                     "values" : []
+                  },
+                  "yaxes" : [
+                     {
+                        "format" : "s",
+                        "label" : "Resonse Time",
+                        "logBase" : 1,
+                        "max" : null,
+                        "min" : null,
+                        "show" : true
+                     },
+                     {
+                        "format" : "short",
+                        "label" : null,
+                        "logBase" : 1,
+                        "max" : null,
+                        "min" : null,
+                        "show" : false
+                     }
+                  ],
+                  "yaxis" : {
+                     "align" : false,
+                     "alignLevel" : null
+                  }
+               },
+               {
+                  "aliasColors" : {},
+                  "bars" : false,
+                  "dashLength" : 10,
+                  "dashes" : false,
+                  "datasource" : "$datasource",
+                  "fill" : 1,
+                  "fillGradient" : 0,
+                  "gridPos" : {
+                     "h" : 8,
+                     "w" : 24,
+                     "x" : 0,
+                     "y" : 15
+                  },
+                  "hiddenSeries" : false,
+                  "id" : 36,
+                  "legend" : {
+                     "alignAsTable" : true,
+                     "avg" : true,
+                     "current" : true,
+                     "max" : true,
+                     "min" : true,
+                     "rightSide" : true,
+                     "show" : true,
+                     "sort" : "current",
+                     "sortDesc" : true,
+                     "total" : false,
+                     "values" : true
+                  },
+                  "lines" : true,
+                  "linewidth" : 1,
+                  "nullPointMode" : "null",
+                  "options" : {
+                     "alertThreshold" : true
+                  },
+                  "percentage" : false,
+                  "pluginVersion" : "8.1.5",
+                  "pointradius" : 2,
+                  "points" : false,
+                  "renderer" : "flot",
+                  "seriesOverrides" : [],
+                  "spaceLength" : 10,
+                  "stack" : false,
+                  "steppedLine" : false,
+                  "targets" : [
+                     {
+                        "expr" : "sum(histogram_quantile(0.95, sum(rate(bbb_api_latency_bucket{job=\"$job\"}[5m])) by (le, instance, endpoint, parameters))) by (instance)",
+                        "interval" : "",
+                        "legendFormat" : "{{instance}}",
+                        "refId" : "A"
+                     }
+                  ],
+                  "thresholds" : [
+                     {
+                        "colorMode" : "warning",
+                        "fill" : true,
+                        "line" : true,
+                        "op" : "gt",
+                        "value" : 8,
+                        "yaxis" : "left"
+                     },
+                     {
+                        "colorMode" : "critical",
+                        "fill" : true,
+                        "line" : true,
+                        "op" : "gt",
+                        "value" : 9,
+                        "yaxis" : "left"
+                     }
+                  ],
+                  "timeFrom" : null,
+                  "timeRegions" : [],
+                  "timeShift" : null,
+                  "title" : "Metrics Response Time (95th Percentile)",
+                  "tooltip" : {
+                     "shared" : true,
+                     "sort" : 0,
+                     "value_type" : "individual"
+                  },
+                  "transformations" : [],
+                  "type" : "graph",
+                  "xaxis" : {
+                     "buckets" : null,
+                     "mode" : "time",
+                     "name" : null,
+                     "show" : true,
+                     "values" : []
+                  },
+                  "yaxes" : [
+                     {
+                        "format" : "s",
+                        "label" : "Response Time",
+                        "logBase" : 1,
+                        "max" : null,
+                        "min" : "0",
+                        "show" : true
+                     },
+                     {
+                        "format" : "short",
+                        "label" : null,
+                        "logBase" : 1,
+                        "max" : null,
+                        "min" : null,
+                        "show" : true
+                     }
+                  ],
+                  "yaxis" : {
+                     "align" : false,
+                     "alignLevel" : null
+                  }
+               },
+               {
+                  "cacheTimeout" : null,
+                  "datasource" : "$datasource",
+                  "fieldConfig" : {
+                     "defaults" : {
+                        "custom" : {
+                           "align" : null,
+                           "displayMode" : "auto",
+                           "filterable" : false
+                        },
+                        "mappings" : [],
+                        "thresholds" : {
+                           "mode" : "absolute",
+                           "steps" : [
+                              {
+                                 "color" : "green",
+                                 "value" : null
+                              }
+                           ]
+                        }
+                     },
+                     "overrides" : []
+                  },
+                  "gridPos" : {
+                     "h" : 4,
+                     "w" : 7,
+                     "x" : 3,
+                     "y" : 23
+                  },
+                  "id" : 50,
+                  "links" : [],
+                  "options" : {
+                     "showHeader" : true
+                  },
+                  "pluginVersion" : "8.1.5",
+                  "targets" : [
+                     {
+                        "expr" : "bbb_exporter{job=\"$job\"}",
+                        "format" : "table",
+                        "instant" : true,
+                        "interval" : "",
+                        "legendFormat" : "",
+                        "refId" : "A"
+                     }
+                  ],
+                  "timeFrom" : null,
+                  "timeShift" : null,
+                  "title" : "BigBlueButton Exporter Version",
+                  "transformations" : [
+                     {
+                        "id" : "filterFieldsByName",
+                        "options" : {
+                           "include" : {
+                              "names" : [
+                                 "instance",
+                                 "version"
+                              ]
+                           }
+                        }
+                     },
+                     {
+                        "id" : "organize",
+                        "options" : {
+                           "excludeByName" : {},
+                           "indexByName" : {},
+                           "renameByName" : {
+                              "instance" : "Instance"
+                           }
+                        }
+                     }
+                  ],
+                  "type" : "table"
+               }
+            ],
+            "title" : "API",
+            "type" : "row"
+         },
+         {
+            "collapsed" : true,
+            "datasource" : null,
+            "gridPos" : {
+               "h" : 1,
+               "w" : 24,
+               "x" : 0,
+               "y" : 50
+            },
+            "id" : 30,
+            "panels" : [
+               {
+                  "datasource" : null,
+                  "fieldConfig" : {
+                     "defaults" : {
+                        "custom" : {
+                           "align" : null,
+                           "displayMode" : "auto",
+                           "filterable" : false
+                        },
+                        "mappings" : [],
+                        "thresholds" : {
+                           "mode" : "absolute",
+                           "steps" : [
+                              {
+                                 "color" : "green",
+                                 "value" : null
+                              }
+                           ]
+                        },
+                        "unit" : "percentunit"
+                     },
+                     "overrides" : []
+                  },
+                  "gridPos" : {
+                     "h" : 22,
+                     "w" : 12,
+                     "x" : 0,
+                     "y" : 45
+                  },
+                  "id" : 63,
+                  "options" : {
+                     "showHeader" : true
+                  },
+                  "pluginVersion" : "8.1.4",
+                  "targets" : [
+                     {
+                        "expr" : "(node_filesystem_size_bytes{job=\"$job_node_exporter\"} - node_filesystem_avail_bytes{job=\"$job_node_exporter\"}) / node_filesystem_size_bytes{job=\"$job_node_exporter\"}",
+                        "format" : "table",
+                        "hide" : false,
+                        "instant" : true,
+                        "interval" : "",
+                        "legendFormat" : "",
+                        "refId" : "A"
+                     },
+                     {
+                        "expr" : "1 - (netdata_disk_space_GiB_average{job=\"$job_netdata\", dimension=\"avail\"} / ignoring(dimension) (netdata_disk_space_GiB_average{job=\"$job_netdata\", dimension=\"avail\"} + ignoring(dimension) netdata_disk_space_GiB_average{job=\"$job_netdata\", dimension=\"used\"} + ignoring(dimension) netdata_disk_space_GiB_average{job=\"$job_netdata\", dimension=\"reserved for root\"}))",
+                        "hide" : true,
+                        "interval" : "",
+                        "legendFormat" : "{{instance}} ({{family}})",
+                        "refId" : "B"
+                     }
+                  ],
+                  "timeFrom" : null,
+                  "timeShift" : null,
+                  "title" : "Storage Utilization",
+                  "transformations" : [
+                     {
+                        "id" : "filterFieldsByName",
+                        "options" : {
+                           "include" : {
+                              "names" : [
+                                 "device",
+                                 "fstype",
+                                 "instance",
+                                 "Value",
+                                 "mountpoint"
+                              ]
+                           }
+                        }
+                     },
+                     {
+                        "id" : "organize",
+                        "options" : {
+                           "excludeByName" : {},
+                           "indexByName" : {
+                              "Value" : 4,
+                              "device" : 2,
+                              "fstype" : 3,
+                              "instance" : 0,
+                              "mountpoint" : 1
+                           },
+                           "renameByName" : {
+                              "device" : "Device",
+                              "fstype" : "FS Type",
+                              "instance" : "Instance",
+                              "mountpoint" : "Mountpoint"
+                           }
+                        }
+                     }
+                  ],
+                  "type" : "table"
+               },
+               {
+                  "datasource" : "$datasource",
+                  "fieldConfig" : {
+                     "defaults" : {
+                        "custom" : {
+                           "align" : null,
+                           "displayMode" : "auto",
+                           "filterable" : false
+                        },
+                        "mappings" : [],
+                        "thresholds" : {
+                           "mode" : "absolute",
+                           "steps" : [
+                              {
+                                 "color" : "green",
+                                 "value" : null
+                              }
+                           ]
+                        }
+                     },
+                     "overrides" : []
+                  },
+                  "gridPos" : {
+                     "h" : 5,
+                     "w" : 6,
+                     "x" : 12,
+                     "y" : 45
+                  },
+                  "id" : 14,
+                  "options" : {
+                     "showHeader" : true
+                  },
+                  "pluginVersion" : "8.1.4",
+                  "targets" : [
+                     {
+                        "expr" : "label_replace(bbb_recordings_processing{job=\"$job\"}, \"name\", \"$1\", \"instance\", \"([a-zA-Z0-9-]*).*:.*\")",
+                        "format" : "table",
+                        "instant" : true,
+                        "interval" : "",
+                        "legendFormat" : "",
+                        "refId" : "A"
+                     }
+                  ],
+                  "timeFrom" : null,
+                  "timeShift" : null,
+                  "title" : "Recordings Processing",
+                  "transformations" : [
+                     {
+                        "id" : "filterFieldsByName",
+                        "options" : {
+                           "include" : {
+                              "names" : [
+                                 "instance",
+                                 "Value"
+                              ]
+                           }
+                        }
+                     },
+                     {
+                        "id" : "organize",
+                        "options" : {
+                           "excludeByName" : {},
+                           "indexByName" : {},
+                           "renameByName" : {
+                              "instance" : "Instance"
+                           }
+                        }
+                     }
+                  ],
+                  "type" : "table"
+               },
+               {
+                  "datasource" : "$datasource",
+                  "fieldConfig" : {
+                     "defaults" : {
+                        "custom" : {
+                           "align" : null,
+                           "displayMode" : "auto",
+                           "filterable" : false
+                        },
+                        "mappings" : [],
+                        "thresholds" : {
+                           "mode" : "absolute",
+                           "steps" : [
+                              {
+                                 "color" : "green",
+                                 "value" : null
+                              }
+                           ]
+                        }
+                     },
+                     "overrides" : []
+                  },
+                  "gridPos" : {
+                     "h" : 5,
+                     "w" : 6,
+                     "x" : 18,
+                     "y" : 45
+                  },
+                  "id" : 58,
+                  "options" : {
+                     "showHeader" : true
+                  },
+                  "pluginVersion" : "8.1.4",
+                  "targets" : [
+                     {
+                        "expr" : "label_replace(bbb_recordings_unprocessed{job=\"$job\"}, \"name\", \"$1\", \"instance\", \"([a-zA-Z0-9-]*).*:.*\")",
+                        "format" : "table",
+                        "instant" : true,
+                        "interval" : "",
+                        "legendFormat" : "",
+                        "refId" : "A"
+                     }
+                  ],
+                  "timeFrom" : null,
+                  "timeShift" : null,
+                  "title" : "Recordings Unprocessed",
+                  "transformations" : [
+                     {
+                        "id" : "filterFieldsByName",
+                        "options" : {
+                           "include" : {
+                              "names" : [
+                                 "instance",
+                                 "Value"
+                              ]
+                           }
+                        }
+                     },
+                     {
+                        "id" : "organize",
+                        "options" : {
+                           "excludeByName" : {},
+                           "indexByName" : {},
+                           "renameByName" : {
+                              "instance" : "Instance"
+                           }
+                        }
+                     }
+                  ],
+                  "type" : "table"
+               },
+               {
+                  "datasource" : "$datasource",
+                  "fieldConfig" : {
+                     "defaults" : {
+                        "custom" : {
+                           "align" : null,
+                           "displayMode" : "auto",
+                           "filterable" : false
+                        },
+                        "mappings" : [],
+                        "thresholds" : {
+                           "mode" : "absolute",
+                           "steps" : [
+                              {
+                                 "color" : "green",
+                                 "value" : null
+                              }
+                           ]
+                        }
+                     },
+                     "overrides" : []
+                  },
+                  "gridPos" : {
+                     "h" : 5,
+                     "w" : 6,
+                     "x" : 12,
+                     "y" : 50
+                  },
+                  "id" : 18,
+                  "options" : {
+                     "showHeader" : true
+                  },
+                  "pluginVersion" : "8.1.4",
+                  "targets" : [
+                     {
+                        "expr" : "label_replace(bbb_recordings_published{job=\"$job\"}, \"name\", \"$1\", \"instance\", \"([a-zA-Z0-9-]*).*:.*\")",
+                        "format" : "table",
+                        "instant" : true,
+                        "interval" : "",
+                        "legendFormat" : "",
+                        "refId" : "A"
+                     }
+                  ],
+                  "timeFrom" : null,
+                  "timeShift" : null,
+                  "title" : "Recordings Published",
+                  "transformations" : [
+                     {
+                        "id" : "filterFieldsByName",
+                        "options" : {
+                           "include" : {
+                              "names" : [
+                                 "instance",
+                                 "Value"
+                              ]
+                           }
+                        }
+                     },
+                     {
+                        "id" : "organize",
+                        "options" : {
+                           "excludeByName" : {},
+                           "indexByName" : {},
+                           "renameByName" : {
+                              "instance" : "Instance"
+                           }
+                        }
+                     }
+                  ],
+                  "type" : "table"
+               },
+               {
+                  "datasource" : "$datasource",
+                  "fieldConfig" : {
+                     "defaults" : {
+                        "custom" : {
+                           "align" : null,
+                           "displayMode" : "auto",
+                           "filterable" : false
+                        },
+                        "mappings" : [],
+                        "thresholds" : {
+                           "mode" : "absolute",
+                           "steps" : [
+                              {
+                                 "color" : "green",
+                                 "value" : null
+                              }
+                           ]
+                        }
+                     },
+                     "overrides" : []
+                  },
+                  "gridPos" : {
+                     "h" : 5,
+                     "w" : 6,
+                     "x" : 18,
+                     "y" : 50
+                  },
+                  "id" : 10,
+                  "options" : {
+                     "showHeader" : true
+                  },
+                  "pluginVersion" : "8.1.4",
+                  "targets" : [
+                     {
+                        "expr" : "label_replace(bbb_recordings_deleted{job=\"$job\"}, \"name\", \"$1\", \"instance\", \"([a-zA-Z0-9-]*).*:.*\")",
+                        "format" : "table",
+                        "instant" : true,
+                        "interval" : "",
+                        "legendFormat" : "",
+                        "refId" : "A"
+                     }
+                  ],
+                  "timeFrom" : null,
+                  "timeShift" : null,
+                  "title" : "Recordings Deleted",
+                  "transformations" : [
+                     {
+                        "id" : "filterFieldsByName",
+                        "options" : {
+                           "include" : {
+                              "names" : [
+                                 "instance",
+                                 "Value"
+                              ]
+                           }
+                        }
+                     },
+                     {
+                        "id" : "organize",
+                        "options" : {
+                           "excludeByName" : {},
+                           "indexByName" : {},
+                           "renameByName" : {
+                              "instance" : "Instance"
+                           }
+                        }
+                     }
+                  ],
+                  "type" : "table"
+               },
+               {
+                  "datasource" : "$datasource",
+                  "fieldConfig" : {
+                     "defaults" : {
+                        "custom" : {
+                           "align" : null,
+                           "displayMode" : "auto",
+                           "filterable" : false
+                        },
+                        "mappings" : [],
+                        "thresholds" : {
+                           "mode" : "absolute",
+                           "steps" : [
+                              {
+                                 "color" : "green",
+                                 "value" : null
+                              }
+                           ]
+                        }
+                     },
+                     "overrides" : []
+                  },
+                  "gridPos" : {
+                     "h" : 5,
+                     "w" : 6,
+                     "x" : 12,
+                     "y" : 55
+                  },
+                  "id" : 20,
+                  "options" : {
+                     "showHeader" : true
+                  },
+                  "pluginVersion" : "8.1.4",
+                  "targets" : [
+                     {
+                        "expr" : "label_replace(bbb_recordings_unpublished{job=\"$job\"}, \"name\", \"$1\", \"instance\", \"([a-zA-Z0-9-]*).*:.*\")",
+                        "format" : "table",
+                        "instant" : true,
+                        "interval" : "",
+                        "legendFormat" : "",
+                        "refId" : "A"
+                     }
+                  ],
+                  "timeFrom" : null,
+                  "timeShift" : null,
+                  "title" : "Recordings Unpublished",
+                  "transformations" : [
+                     {
+                        "id" : "filterFieldsByName",
+                        "options" : {
+                           "include" : {
+                              "names" : [
+                                 "instance",
+                                 "Value"
+                              ]
+                           }
+                        }
+                     },
+                     {
+                        "id" : "organize",
+                        "options" : {
+                           "excludeByName" : {},
+                           "indexByName" : {},
+                           "renameByName" : {
+                              "instance" : "Instance"
+                           }
+                        }
+                     }
+                  ],
+                  "type" : "table"
+               },
+               {
+                  "aliasColors" : {},
+                  "bars" : false,
+                  "dashLength" : 10,
+                  "dashes" : false,
+                  "datasource" : "$datasource",
+                  "description" : "Requires `RECORDINGS_METRICS_READ_FROM_DISK` to be enabled on the BigBlueButton Exporter",
+                  "fill" : 1,
+                  "fillGradient" : 0,
+                  "gridPos" : {
+                     "h" : 7,
+                     "w" : 12,
+                     "x" : 12,
+                     "y" : 60
+                  },
+                  "hiddenSeries" : false,
+                  "id" : 60,
+                  "legend" : {
+                     "alignAsTable" : true,
+                     "avg" : false,
+                     "current" : true,
+                     "max" : false,
+                     "min" : false,
+                     "rightSide" : true,
+                     "show" : true,
+                     "total" : false,
+                     "values" : true
+                  },
+                  "lines" : true,
+                  "linewidth" : 1,
+                  "nullPointMode" : "null",
+                  "options" : {
+                     "alertThreshold" : true
+                  },
+                  "percentage" : false,
+                  "pluginVersion" : "8.1.4",
+                  "pointradius" : 2,
+                  "points" : false,
+                  "renderer" : "flot",
+                  "seriesOverrides" : [],
+                  "spaceLength" : 10,
+                  "stack" : false,
+                  "steppedLine" : false,
+                  "targets" : [
+                     {
+                        "expr" : "bbb_recordings_unprocessed{job=\"$job\"}",
+                        "interval" : "",
+                        "legendFormat" : "{{instance}}",
+                        "refId" : "A"
+                     }
+                  ],
+                  "thresholds" : [],
+                  "timeFrom" : null,
+                  "timeRegions" : [],
+                  "timeShift" : null,
+                  "title" : "Recordings Unprocessed",
+                  "tooltip" : {
+                     "shared" : true,
+                     "sort" : 0,
+                     "value_type" : "individual"
+                  },
+                  "type" : "graph",
+                  "xaxis" : {
+                     "buckets" : null,
+                     "mode" : "time",
+                     "name" : null,
+                     "show" : true,
+                     "values" : []
+                  },
+                  "yaxes" : [
+                     {
+                        "format" : "short",
+                        "label" : "Recordings ",
+                        "logBase" : 1,
+                        "max" : null,
+                        "min" : "0",
+                        "show" : true
+                     },
+                     {
+                        "format" : "short",
+                        "label" : null,
+                        "logBase" : 1,
+                        "max" : null,
+                        "min" : null,
+                        "show" : true
+                     }
+                  ],
+                  "yaxis" : {
+                     "align" : false,
+                     "alignLevel" : null
+                  }
+               }
+            ],
+            "title" : "Recordings",
+            "type" : "row"
+         },
+         {
+            "collapsed" : true,
+            "datasource" : null,
+            "gridPos" : {
+               "h" : 1,
+               "w" : 24,
+               "x" : 0,
+               "y" : 51
+            },
+            "id" : 44,
+            "panels" : [
+               {
+                  "cacheTimeout" : null,
+                  "cards" : {
+                     "cardPadding" : null,
+                     "cardRound" : null
+                  },
+                  "color" : {
+                     "cardColor" : "#b4ff00",
+                     "colorScale" : "linear",
+                     "colorScheme" : "interpolateGnBu",
+                     "exponent" : 0.5,
+                     "mode" : "spectrum"
+                  },
+                  "dataFormat" : "tsbuckets",
+                  "datasource" : "$datasource",
+                  "description" : "Buckets (Y axis) represents the number of participants while the count in each bucket represents the number of rooms with that particular bucket's value. ",
+                  "gridPos" : {
+                     "h" : 10,
+                     "w" : 12,
+                     "x" : 0,
+                     "y" : 46
+                  },
+                  "heatmap" : {},
+                  "hideZeroBuckets" : true,
+                  "highlightCards" : true,
+                  "id" : 40,
+                  "legend" : {
+                     "show" : true
+                  },
+                  "links" : [],
+                  "pluginVersion" : "6.7.2",
+                  "reverseYBuckets" : false,
+                  "targets" : [
+                     {
+                        "expr" : "sum by (le) (bbb_room_participants_bucket{job=\"$job\"})",
+                        "format" : "heatmap",
+                        "instant" : false,
+                        "interval" : "",
+                        "legendFormat" : "{{le}}",
+                        "refId" : "A"
+                     }
+                  ],
+                  "timeFrom" : null,
+                  "timeShift" : null,
+                  "title" : "Heatmap of Room Participants",
+                  "tooltip" : {
+                     "show" : true,
+                     "showHistogram" : false
+                  },
+                  "type" : "heatmap",
+                  "xAxis" : {
+                     "show" : true
+                  },
+                  "xBucketNumber" : null,
+                  "xBucketSize" : null,
+                  "yAxis" : {
+                     "decimals" : null,
+                     "format" : "short",
+                     "logBase" : 1,
+                     "max" : null,
+                     "min" : null,
+                     "show" : true,
+                     "splitFactor" : null
+                  },
+                  "yBucketBound" : "auto",
+                  "yBucketNumber" : null,
+                  "yBucketSize" : null
+               },
+               {
+                  "cacheTimeout" : null,
+                  "cards" : {
+                     "cardPadding" : null,
+                     "cardRound" : null
+                  },
+                  "color" : {
+                     "cardColor" : "#b4ff00",
+                     "colorScale" : "linear",
+                     "colorScheme" : "interpolateGnBu",
+                     "exponent" : 0.5,
+                     "mode" : "spectrum"
+                  },
+                  "dataFormat" : "tsbuckets",
+                  "datasource" : "$datasource",
+                  "description" : "Buckets (Y axis) represents the number of listeners while the count in each bucket represents the number of rooms with that particular bucket's value. ",
+                  "gridPos" : {
+                     "h" : 10,
+                     "w" : 12,
+                     "x" : 12,
+                     "y" : 46
+                  },
+                  "heatmap" : {},
+                  "hideZeroBuckets" : true,
+                  "highlightCards" : true,
+                  "id" : 42,
+                  "legend" : {
+                     "show" : true
+                  },
+                  "links" : [],
+                  "pluginVersion" : "6.7.2",
+                  "reverseYBuckets" : false,
+                  "targets" : [
+                     {
+                        "expr" : "sum by (le) (bbb_room_listeners_bucket{job=\"$job\"})",
+                        "format" : "heatmap",
+                        "instant" : false,
+                        "interval" : "",
+                        "legendFormat" : "{{le}}",
+                        "refId" : "A"
+                     }
+                  ],
+                  "timeFrom" : null,
+                  "timeShift" : null,
+                  "title" : "Heatmap of Listeners Participants",
+                  "tooltip" : {
+                     "show" : true,
+                     "showHistogram" : false
+                  },
+                  "type" : "heatmap",
+                  "xAxis" : {
+                     "show" : true
+                  },
+                  "xBucketNumber" : null,
+                  "xBucketSize" : null,
+                  "yAxis" : {
+                     "decimals" : null,
+                     "format" : "short",
+                     "logBase" : 1,
+                     "max" : null,
+                     "min" : null,
+                     "show" : true,
+                     "splitFactor" : null
+                  },
+                  "yBucketBound" : "auto",
+                  "yBucketNumber" : null,
+                  "yBucketSize" : null
+               },
+               {
+                  "cacheTimeout" : null,
+                  "cards" : {
+                     "cardPadding" : null,
+                     "cardRound" : null
+                  },
+                  "color" : {
+                     "cardColor" : "#b4ff00",
+                     "colorScale" : "linear",
+                     "colorScheme" : "interpolateGnBu",
+                     "exponent" : 0.5,
+                     "mode" : "spectrum"
+                  },
+                  "dataFormat" : "tsbuckets",
+                  "datasource" : "$datasource",
+                  "description" : "Buckets (Y axis) represents the number of voice participants while the count in each bucket represents the number of rooms with that particular bucket's value. ",
+                  "gridPos" : {
+                     "h" : 10,
+                     "w" : 12,
+                     "x" : 0,
+                     "y" : 56
+                  },
+                  "heatmap" : {},
+                  "hideZeroBuckets" : true,
+                  "highlightCards" : true,
+                  "id" : 46,
+                  "legend" : {
+                     "show" : true
+                  },
+                  "links" : [],
+                  "pluginVersion" : "6.7.2",
+                  "reverseYBuckets" : false,
+                  "targets" : [
+                     {
+                        "expr" : "sum by (le) (bbb_room_voice_participants_bucket{job=\"$job\"})",
+                        "format" : "heatmap",
+                        "instant" : false,
+                        "interval" : "",
+                        "legendFormat" : "{{le}}",
+                        "refId" : "A"
+                     }
+                  ],
+                  "timeFrom" : null,
+                  "timeShift" : null,
+                  "title" : "Heatmap of Voice Participants",
+                  "tooltip" : {
+                     "show" : true,
+                     "showHistogram" : false
+                  },
+                  "type" : "heatmap",
+                  "xAxis" : {
+                     "show" : true
+                  },
+                  "xBucketNumber" : null,
+                  "xBucketSize" : null,
+                  "yAxis" : {
+                     "decimals" : null,
+                     "format" : "short",
+                     "logBase" : 1,
+                     "max" : null,
+                     "min" : null,
+                     "show" : true,
+                     "splitFactor" : null
+                  },
+                  "yBucketBound" : "auto",
+                  "yBucketNumber" : null,
+                  "yBucketSize" : null
+               },
+               {
+                  "cacheTimeout" : null,
+                  "cards" : {
+                     "cardPadding" : null,
+                     "cardRound" : null
+                  },
+                  "color" : {
+                     "cardColor" : "#b4ff00",
+                     "colorScale" : "linear",
+                     "colorScheme" : "interpolateGnBu",
+                     "exponent" : 0.5,
+                     "mode" : "spectrum"
+                  },
+                  "dataFormat" : "tsbuckets",
+                  "datasource" : "$datasource",
+                  "description" : "Buckets (Y axis) represents the number of video participants while the count in each bucket represents the number of rooms with that particular bucket's value. ",
+                  "gridPos" : {
+                     "h" : 10,
+                     "w" : 12,
+                     "x" : 12,
+                     "y" : 56
+                  },
+                  "heatmap" : {},
+                  "hideZeroBuckets" : true,
+                  "highlightCards" : true,
+                  "id" : 48,
+                  "legend" : {
+                     "show" : true
+                  },
+                  "links" : [],
+                  "pluginVersion" : "6.7.2",
+                  "reverseYBuckets" : false,
+                  "targets" : [
+                     {
+                        "expr" : "sum by (le) (bbb_room_video_participants_bucket{job=\"$job\"})",
+                        "format" : "heatmap",
+                        "instant" : false,
+                        "interval" : "",
+                        "legendFormat" : "{{le}}",
+                        "refId" : "A"
+                     }
+                  ],
+                  "timeFrom" : null,
+                  "timeShift" : null,
+                  "title" : "Heatmap of Video Participants",
+                  "tooltip" : {
+                     "show" : true,
+                     "showHistogram" : false
+                  },
+                  "type" : "heatmap",
+                  "xAxis" : {
+                     "show" : true
+                  },
+                  "xBucketNumber" : null,
+                  "xBucketSize" : null,
+                  "yAxis" : {
+                     "decimals" : null,
+                     "format" : "short",
+                     "logBase" : 1,
+                     "max" : null,
+                     "min" : null,
+                     "show" : true,
+                     "splitFactor" : null
+                  },
+                  "yBucketBound" : "auto",
+                  "yBucketNumber" : null,
+                  "yBucketSize" : null
+               }
+            ],
+            "title" : "Heatmaps",
+            "type" : "row"
+         }
+      ],
+      "refresh" : "10s",
+      "schemaVersion" : 30,
+      "style" : "dark",
+      "tags" : [
+         "BigBlueButton",
+         "prometheus"
+      ],
+      "templating" : {
+         "list" : [
+            {
+               "current" : {
+                  "selected" : false,
+                  "text" : "Prometheus",
+                  "value" : "Prometheus"
+               },
+               "description" : null,
+               "error" : null,
+               "hide" : 0,
+               "includeAll" : false,
+               "label" : "Datasource",
+               "multi" : false,
+               "name" : "datasource",
+               "options" : [],
+               "query" : "prometheus",
+               "queryValue" : "",
+               "refresh" : 1,
+               "regex" : "",
+               "skipUrlSync" : false,
+               "type" : "datasource"
+            },
+            {
+               "allValue" : null,
+               "current" : {
+                  "selected" : false,
+                  "text" : "bbb_prod",
+                  "value" : "bbb_prod"
+               },
+               "datasource" : "$datasource",
+               "definition" : "label_values(bbb_exporter, job)",
+               "description" : null,
+               "error" : null,
+               "hide" : 0,
+               "includeAll" : false,
+               "label" : "Job",
+               "multi" : false,
+               "name" : "job",
+               "options" : [],
+               "query" : {
+                  "query" : "label_values(bbb_exporter, job)",
+                  "refId" : "Prometheus-job-Variable-Query"
+               },
+               "refresh" : 1,
+               "regex" : "",
+               "skipUrlSync" : false,
+               "sort" : 0,
+               "tagValuesQuery" : "",
+               "tagsQuery" : "",
+               "type" : "query",
+               "useTags" : false
+            },
+            {
+               "allValue" : null,
+               "current" : {
+                  "isNone" : true,
+                  "selected" : false,
+                  "text" : "None",
+                  "value" : ""
+               },
+               "datasource" : "$datasource",
+               "definition" : "label_values(node_cpu_seconds_total, job)",
+               "description" : null,
+               "error" : null,
+               "hide" : 0,
+               "includeAll" : false,
+               "label" : "Job node_exporter",
+               "multi" : false,
+               "name" : "job_node_exporter",
+               "options" : [],
+               "query" : {
+                  "query" : "label_values(node_cpu_seconds_total, job)",
+                  "refId" : "Prometheus-job_node_exporter-Variable-Query"
+               },
+               "refresh" : 1,
+               "regex" : "",
+               "skipUrlSync" : false,
+               "sort" : 0,
+               "tagValuesQuery" : "",
+               "tagsQuery" : "",
+               "type" : "query",
+               "useTags" : false
+            },
+            {
+               "allValue" : null,
+               "current" : {
+                  "selected" : true,
+                  "text" : "bbb_prod_netdata",
+                  "value" : "bbb_prod_netdata"
+               },
+               "datasource" : "$datasource",
+               "definition" : "label_values(netdata_system_cpu_percentage_average, job)",
+               "description" : null,
+               "error" : null,
+               "hide" : 0,
+               "includeAll" : false,
+               "label" : "Job Netdata",
+               "multi" : false,
+               "name" : "job_netdata",
+               "options" : [],
+               "query" : {
+                  "query" : "label_values(netdata_system_cpu_percentage_average, job)",
+                  "refId" : "Prometheus-job_netdata-Variable-Query"
+               },
+               "refresh" : 1,
+               "regex" : "",
+               "skipUrlSync" : false,
+               "sort" : 0,
+               "tagValuesQuery" : "",
+               "tagsQuery" : "",
+               "type" : "query",
+               "useTags" : false
+            },
+            {
+               "allValue" : null,
+               "current" : {
+                  "isNone" : true,
+                  "selected" : false,
+                  "text" : "None",
+                  "value" : ""
+               },
+               "datasource" : "$datasource",
+               "definition" : "label_values(node_network_address_assign_type, device)",
+               "description" : null,
+               "error" : null,
+               "hide" : 0,
+               "includeAll" : false,
+               "label" : "Network Interface",
+               "multi" : false,
+               "name" : "interface",
+               "options" : [],
+               "query" : {
+                  "query" : "label_values(node_network_address_assign_type, device)",
+                  "refId" : "Prometheus-interface-Variable-Query"
+               },
+               "refresh" : 2,
+               "regex" : "",
+               "skipUrlSync" : false,
+               "sort" : 0,
+               "tagValuesQuery" : "",
+               "tagsQuery" : "",
+               "type" : "query",
+               "useTags" : false
+            },
+            {
+               "datasource" : "$datasource",
+               "description" : null,
+               "error" : null,
+               "filters" : [],
+               "hide" : 0,
+               "label" : null,
+               "name" : "Filters",
+               "skipUrlSync" : false,
+               "type" : "adhoc"
+            }
+         ]
+      },
+      "time" : {
+         "from" : "now-6h",
+         "to" : "now"
+      },
+      "timepicker" : {
+         "refresh_intervals" : [
+            "10s",
+            "30s",
+            "1m",
+            "5m",
+            "15m",
+            "30m",
+            "1h",
+            "2h",
+            "1d"
+         ]
+      },
+      "timezone" : "",
+      "title" : "BigBlueButton Universe",
+      "uid" : "HIbd_CXZz",
+      "version" : 19
+   },
+   "meta" : {
+      "canAdmin" : true,
+      "canEdit" : true,
+      "canSave" : true,
+      "canStar" : true,
+      "created" : "2021-09-10T16:18:20+02:00",
+      "createdBy" : "admin",
+      "expires" : "0001-01-01T00:00:00Z",
+      "folderId" : 0,
+      "folderTitle" : "General",
+      "folderUid" : "",
+      "folderUrl" : "",
+      "hasAcl" : true,
+      "isFolder" : false,
+      "provisioned" : false,
+      "provisionedExternalId" : "",
+      "slug" : "bigbluebutton-universe",
+      "type" : "db",
+      "updated" : "2021-09-27T21:33:31+02:00",
+      "updatedBy" : "admin",
+      "url" : "/d/HIbd_CXZz/bigbluebutton-universe",
+      "version" : 19
+   }
+}
